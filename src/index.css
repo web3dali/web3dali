@@ -33,12 +33,12 @@ a {
 
 @font-face {
   font-family: HeroKid-BoldCondensed;
-  src: url('Herokid-BoldCondensed.otf') format('opentype');
+  src: url('/Herokid-BoldCondensed.otf') format('opentype');
 }
 
 @font-face {
   font-family: HeroKid-ExtraBoldCondensed;
-  src: url('Herokid-ExtraBoldCondensed.otf') format('opentype');
+  src: url('/Herokid-ExtraBoldCondensed.otf') format('opentype');
 }
 
 .hero-kid-700 {
