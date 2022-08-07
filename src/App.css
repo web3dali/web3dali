@@ -1,0 +1,39 @@
+.hero-bg {
+  background-image: url('/wamo_hero_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu a {
+  color: #ffffff;
+}
+
+.blockquote:before {
+  content: '“';
+  position: absolute;
+  left: 0;
+  top: 80%;
+  color: #0050f9;
+  font-size: 128px;
+}
+
+.blockquote:after {
+  content: '”';
+  position: absolute;
+  right: 0;
+  top: 80%;
+  color: #0050f9;
+  font-size: 128px;
+}
+
+.content {
+  background: linear-gradient(
+    180deg,
+    rgba(106, 194, 180, 0) 0%,
+    rgba(108, 228, 209, 0.6) 100%
+  );
+}
+
+.venue {
+  background-color: #6ce4d1;
+}
