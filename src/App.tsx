@@ -2,6 +2,7 @@ import './App.css'
 
 import Hero from './Hero'
 import Footer from './Footer'
+import ConnectBtn from './ConnectBtn'
 import wamo from './assets/wamo.svg'
 import SpeakerCard from './SpeakerCard'
 
@@ -23,10 +24,8 @@ function App() {
             <a href="#">NFT</a>
             <a href="#">SBT</a>
             <a href="#">About</a>
-            <a href="#" className="btn btn-secondary !text-black">
-              Connect Wallet
-            </a>
           </div>
+          <ConnectBtn />
         </div>
         {/* <!-- Hero --> */}
         <Hero />
