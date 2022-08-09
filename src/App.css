@@ -26,22 +26,9 @@
   font-size: 128px;
 }
 
-.content {
-  background: linear-gradient(
-    180deg,
-    rgba(106, 194, 180, 0) 0%,
-    rgba(108, 228, 209, 0.6) 100%
-  );
-}
-
 .venue {
   background-color: #6ce4d1;
 }
-/* .content-bg {
-  background-image: url('/content_bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 .connect-btn button {
   height: 36px !important;

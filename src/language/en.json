@@ -21,7 +21,28 @@
         "content2": "In the spirit of WAMO, we will be hosting the Summer of WAMO | Dali Web3 Fest in this August, 19-20th."
     },
     "content": {
-        "title": "Content"
+        "title": "Content",
+        "text_01": "The first massive Web3 event in China that owned, co-created and organized only by its members, without any centralized leadership. ",
+        "text_02": "Bring together Web3 & DAO communities for deep dialogues, connections and co-creation.",
+        "text_03": "Share ideas, exchange technical insights, explore the future of DAO, incentive mechanism, public goods and future societies. Find innovative ways to create better open source solutions, positive-sum outcomes and positive externalities. ",
+        "day1_text_01": "Crypto Trends, The History of Web3",
+        "day1_text_02": "DeFi, Tokenomics",
+        "day1_text_03": "NFT",
+        "day1_text_04": "Creator Economy, Art and Music",
+        "day2_text_01": "Public Goods/Radical Market",
+        "day2_text_02": "DAOs",
+        "day2_text_03": "Digital Nomads, Humanities",
+        "day2_text_04": "Data and Privacy, Ethereum 2.0",
+        "camp1_title": "Dali Community Camp",
+        "camp1_desc": "Showcase the culture and lifestyle of Dali, which focuses on social issues and sustainable community development",
+        "camp2_title": "Theme Camp",
+        "camp2_desc": "15+ independent theme camps theme camp designed by co-builders",
+        "camp3_title": "Art Camp",
+        "camp3_desc": "local art display top performing artist and installation art NFT works display",
+        "camp4_title": "Sponsor Camp",
+        "camp4_desc": " Made of medium-sized tents and distributed to sponsors and their teams as a venue for camping, team activities and meetup",
+        "camp5_title": "Co-creation Camp",
+        "camp5_desc": "Music camp: Musicians will be playing here. Have-fun camp: skateboards, shuttlecocks, frisbees, and poker. Culture experience camp: Dali special activities like flower cake making."
     },
     "venue": {
         "title": "Venue",

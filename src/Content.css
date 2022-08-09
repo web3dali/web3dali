@@ -1,0 +1,31 @@
+.content {
+  width: 100vw;
+  height: auto;
+  background-image: url('/wamo_content.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.content-inner {
+  background: linear-gradient(
+    180deg,
+    rgba(106, 194, 180, 0) 0%,
+    rgba(108, 228, 209, 0.6) 100%
+  );
+}
+
+.content-camp-part {
+  display: grid;
+  grid-template-columns: 525px 1fr;
+  gap: 0px 0px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+figure {
+  margin: 0;
+  border: none;
+}
