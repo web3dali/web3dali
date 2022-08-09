@@ -2,6 +2,7 @@ import './App.css'
 
 import Hero from './Hero'
 import Footer from './Footer'
+import ConnectBtn from './ConnectBtn'
 import wamo from './assets/wamo.svg'
 import SpeakerCard from './SpeakerCard'
 import { useTranslation, Trans } from 'react-i18next'
@@ -35,6 +36,7 @@ function App() {
               {t('header.connect')}
             </a>
           </div>
+          <ConnectBtn />
         </div>
         {/* <!-- Hero --> */}
         <Hero />
