@@ -32,11 +32,9 @@ function App() {
             <a href="#">{t('header.nft')}</a>
             <a href="#">{t('header.sbt')}</a>
             <a href="#">{t('header.about')}</a>
-            <a href="#" className="btn btn-secondary !text-black">
-              {t('header.connect')}
-            </a>
+            {/* <a href="#" className="btn btn-secondary !text-black">{t('header.connect')}</a> */}
+            <ConnectBtn label={t('header.connect')}/>
           </div>
-          <ConnectBtn />
         </div>
         {/* <!-- Hero --> */}
         <Hero />

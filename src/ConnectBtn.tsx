@@ -1,11 +1,9 @@
-import { Container } from '@chakra-ui/react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-function ConnectBtn() {
+function ConnectBtn(props: { label: any; }) {
+  const { label = 'Connect Wallet' } = props;
   return (
-    <Container paddingY='10'>
-      <ConnectButton />
-    </Container>
+    <div className="connect-btn"><ConnectButton label={label} /></div>
   )
 }
 
