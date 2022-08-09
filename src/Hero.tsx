@@ -1,21 +1,25 @@
+import { useTranslation } from 'react-i18next'
+
 function Hero() {
+  const { t } = useTranslation()
   return (
     <>
       <div className="flex flex-col mt-48">
-        <div>Event</div>
+        <div>{t('hero.event')}</div>
         <div className="text-5xl font-bold py-8 hero-kid-800">
-          Summer of WAMO
+          {t('hero.summer')}
         </div>
-        <div className="text-4xl font-bold py-5">Dali Web3 Fest</div>
-        <div className="text-[1.25rem]">August 19-20th, 2022</div>
-        <div className="text-[1.25rem]">@DaLi Flowers of Lifetime Farm</div>
+
+        <div className="text-4xl font-bold py-5">{t('hero.dali')}</div>
+        <div className="text-[1.25rem]">{t('hero.dali')}</div>
+        <div className="text-[1.25rem]">{t('hero.farm')}</div>
       </div>
       <div className="flex gap-x-8 pt-12">
         <a href="" className="btn btn-accent">
-          Buy ticket
+          {t('hero.buy')}
         </a>
         <a href="" className="btn btn-accent btn-accent-lg">
-          Add to Calendar
+          {t('hero.calendar')}
         </a>
       </div>
     </>

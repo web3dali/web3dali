@@ -1,6 +1,12 @@
 import wamo from './assets/wamo.svg'
+import { useTranslation } from 'react-i18next'
+import i18n from 'i18next'
 
+const changeLanguage = () => {
+  i18n.changeLanguage(i18n.language == 'en' ? 'zh' : 'en')
+}
 function Footer() {
+  const { t } = useTranslation()
   return (
     <>
       <div className="box-container flex-between pt-12 pb-8 border-b border-white">
@@ -12,26 +18,26 @@ function Footer() {
           </div>
         </div>
         <div className="flex items-center gap-x-8">
-          <a href="#" className="text-white">
+          <a href="#" className="text-white" onClick={changeLanguage}>
             中 / EN
           </a>
           <a href="#" className="text-white">
-            Content
+            {t('header.content')}
           </a>
           <a href="#" className="text-white">
-            Venue
+            {t('header.venue')}
           </a>
           <a href="#" className="text-white">
-            Speakers
+            {t('header.speakers')}
           </a>
           <a href="#" className="text-white">
-            NFT
+            {t('header.nft')}
           </a>
           <a href="#" className="text-white">
-            SBT
+            {t('header.sbt')}
           </a>
           <a href="#" className="text-white">
-            About
+            {t('header.about')}
           </a>
         </div>
       </div>

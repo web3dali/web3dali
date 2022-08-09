@@ -1,0 +1,41 @@
+{
+    "header": {
+        "content": "内容",
+        "venue": "场地",
+        "speakers": "演说者",
+        "nft": "NFT",
+        "about": "About",
+        "sbt": "SBT",
+        "connect": "Connect Wallet"
+
+    },
+
+    "hero": {
+        "event": "活动",
+        "summer": "瓦猫之夏",
+        "dali": "大理 WEB 3 街(gāi)会",
+        "time": "2022年 8月 19日-20日",
+        "farm": "@ 大理花伴一生 农场",
+        "buy": "购票",
+        "calendar": "添加到日历",
+        "content1": "信任、共识和热情，在这个夏天集聚起来迸发出巨大的能量怀抱着对技术的热枕、对 DAO 的治理与自组织精神的探索、 对公共物品的思考和对社区与Web3 未来的畅想。",
+        "content2": "我们将在 8月19日-20日，在大理举办大理 Web3 街(gāi)会: 瓦猫之夏|Dali Web3 Summer Fest"
+    },
+    "content": {
+        "title": "内容"
+    },
+    "venue": {
+        "title": "场地",
+        "address": "花伴一生玫瑰庄园，大理市银桥镇大丽线新邑村委会七社8号",
+        "since": "  ",
+        "speakers": "演说者"
+    },
+    "footer": {
+        "detail": "All rights reserved @ React"
+    },
+    "home": {
+        "hot_recommended": "Hot Recommended",
+        "new_arrival": "New arrival",
+        "joint_venture": "Joint Venture"
+    }
+}
