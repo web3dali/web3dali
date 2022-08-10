@@ -25,7 +25,7 @@ function Hero() {
         </div>
 
         <div className="text-4xl font-bold py-5">{t('hero.dali')}</div>
-        <div className="text-[1.25rem]">{t('hero.dali')}</div>
+        <div className="text-[1.25rem] mb-[6px]">{t('hero.time')}</div>
         <div className="text-[1.25rem]">{t('hero.farm')}</div>
       </div>
       <div className="flex gap-x-8 pt-12">

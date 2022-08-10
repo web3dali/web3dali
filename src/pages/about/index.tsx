@@ -12,7 +12,7 @@ export const About = () => {
   }
   return (
     <>
-      <div className="about  bg-white">
+      <div id="about" className="about  bg-white">
         <div className="about_bg1"></div>
         <div className="about_inner pt-50 pb-120">
           <div className="box-container ">

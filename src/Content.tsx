@@ -58,13 +58,13 @@ function Content() {
               </div>
             </section>
             <section className="flex flex-row">
-              <div className="text-[#2f2f2f] w-[50%] text-right flex flex-col justify-around">
+              <div className="text-[#2f2f2f] w-[50%] text-right flex flex-col justify-around mt-10">
                 <fieldset className="pr10">
                   <figcaption className="text-primary hero-kid-700 text-4xl">
                     {t('content.camp1_title')}
                   </figcaption>
                   <figure className="text-xl pt-7">
-                    {t('content.camp1_desc')}
+                    {t('content.camp1_desc_1')} <br />{t('content.camp1_desc_2')}
                   </figure>
                 </fieldset>
                 <fieldset className="pr10">
@@ -72,7 +72,7 @@ function Content() {
                     {t('content.camp2_title')}
                   </figcaption>
                   <figure className="text-xl pt-7">
-                    {t('content.camp2_desc')}
+                    {t('content.camp2_desc_1')} <br />{t('content.camp2_desc_2')}
                   </figure>
                 </fieldset>
                 <fieldset className="pr10">
@@ -80,7 +80,7 @@ function Content() {
                     {t('content.camp3_title')}
                   </figcaption>
                   <figure className="text-xl pt-7">
-                    {t('content.camp3_desc')}
+                  {t('content.camp3_desc_1')} <br />{t('content.camp3_desc_2')} <br /> {t('content.camp3_desc_3')}
                   </figure>
                 </fieldset>
                 <fieldset className="pr10">
@@ -88,15 +88,15 @@ function Content() {
                     {t('content.camp4_title')}
                   </figcaption>
                   <figure className="text-xl pt-7">
-                    {t('content.camp4_desc')}
+                    {t('content.camp4_desc_1')} <br /> {t('content.camp4_desc_2')} 
                   </figure>
                 </fieldset>
                 <fieldset className="pr10">
                   <figcaption className="text-primary hero-kid-700 text-4xl">
                     {t('content.camp5_title')}
                   </figcaption>
-                  <figure className="text-xl pt-7">
-                    {t('content.camp5_desc')}
+                  <figure className="text-[17px] pt-7">
+                    {t('content.camp5_desc_1')} <br />{t('content.camp5_desc_2')} <br /> {t('content.camp5_desc_3')}
                   </figure>
                 </fieldset>
               </div>
