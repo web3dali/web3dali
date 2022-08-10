@@ -1,7 +1,21 @@
+.header {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .hero-bg {
-  background-image: url('/wamo_hero_bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: block;
+  width: 100%;
+}
+
+.brand {
+  justify-content: center;
+  align-items: center;
+  margin-top: .1rem;
 }
 
 .menu a {

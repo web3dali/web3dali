@@ -18,7 +18,7 @@ function Hero() {
   const { t } = useTranslation()
   return (
     <>
-      <div className="text-[#FFF] flex flex-col mt-[20vh]">
+      <div className="text-[#FFF] flex flex-col mt-[5%]">
         <div>{t('hero.event')}</div>
         <div className="text-5xl font-bold py-8 hero-kid-800">
           {t('hero.summer')}
@@ -29,7 +29,7 @@ function Hero() {
         <div className="text-[1.25rem]">{t('hero.farm')}</div>
       </div>
       <div className="flex gap-x-8 pt-12">
-        <a href="https://www.huodongxing.com/event/6661890942400" className="btn btn-accent px-[2rem]">
+        <a href="https://www.huodongxing.com/event/6661890942400" target="blank" className="btn btn-accent px-[2rem]">
           {t('hero.buy')}
         </a>
         <a onClick={addIcs} className="btn btn-accent btn-accent-lg">

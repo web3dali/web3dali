@@ -36,7 +36,7 @@ function SpeakerBlock() {
   const { t } = useTranslation()
 
   return (
-    <div className="box-container pb-10 max-w-[1140px]">
+    <div className="box-container pb-10 max-w-[1140px]" id="speaker">
       <h1 className="text-[4rem] text-accent hero-kid-700">
         {t('venue.speakers')}
       </h1>
