@@ -13,7 +13,7 @@ export const About = () => {
   return (
     <>
       <div className="about  bg-white">
-        <div className='about_bg1'></div>
+        <div className="about_bg1"></div>
         <div className="about_inner pt-50 pb-120">
           <div className="box-container ">
             <h1 className="text-[4rem] about-title hero-kid-700">
@@ -46,25 +46,25 @@ export const About = () => {
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_1')}
-                          </span>
+                          </span>{' '}{' '}
                           {t('about.small_content_contet_1')}
                         </p>
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_2')}
-                          </span>
+                          </span>{' '}{' '}
                           {t('about.small_content_contet_2')}
                         </p>
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_3')}
-                          </span>
+                          </span>{' '}{' '}
                           {t('about.small_content_contet_3')}
                         </p>
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_4')}
-                          </span>
+                          </span>{' '}{' '}
                           {t('about.small_content_contet_4')}
                         </p>
                       </div>
@@ -147,7 +147,9 @@ export const About = () => {
         </div>
       </div>
       <div className="faq box-container mt--80 pt-6  pb-7">
-        <h2 className="text-[2rem] text-accent pl-12 pr-12">{t('about.small_title_4')}</h2>
+        <h2 className="text-[2rem] text-accent pl-12 pr-12">
+          {t('about.small_title_4')}
+        </h2>
         <div className="faq_list pt-3 pl-12 pr-12">
           <div
             className="faq_li text-[#000000] text-[1.3rem]"
