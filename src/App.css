@@ -25,3 +25,11 @@
   color: #0050f9;
   font-size: 128px;
 }
+.social{
+  justify-content: flex-end;
+}
+.social img{
+  width:2rem;
+  height:2rem;
+  cursor: pointer;
+}
