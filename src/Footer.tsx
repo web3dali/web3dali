@@ -7,7 +7,7 @@ const changeLanguage = () => {
 }
 function Footer() {
   const { t } = useTranslation()
-  const openSocial = (url) => {
+  const openSocial = (url:string) => {
     window.open(url)
   }
   return (
