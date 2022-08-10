@@ -2,6 +2,7 @@ import './App.css'
 
 import Hero from './Hero'
 import Footer from './Footer'
+import About from './pages/about';
 import ConnectBtn from './ConnectBtn'
 import wamo from './assets/wamo.svg'
 import SpeakerCard from './SpeakerCard'
@@ -46,7 +47,7 @@ function App() {
             <em className="max-w-[1025px]">{t('hero.content1')}</em>
           </div>
         </div>
-        <div className="text-white text-2xl max-w-[988px] mx-auto mt-8">
+        <div className="text-[#2f2f2f] text-2xl max-w-[988px] mx-auto mt-8">
           <em> {t('hero.content2')}</em>
         </div>
       </div>
@@ -76,7 +77,7 @@ function App() {
           </div>
         </div>
       </div>
-
+      <About />
       {/* <!-- Footer --> */}
       <Footer />
     </div>
