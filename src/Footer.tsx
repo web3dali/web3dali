@@ -25,22 +25,22 @@ function Footer() {
             <a href="#" className="text-white" onClick={changeLanguage}>
               中 / EN
             </a>
-            <a href="#" className="text-white">
+            <a href="#content" className="text-white">
               {t('header.content')}
             </a>
-            <a href="#" className="text-white">
+            <a href="#venue" className="text-white">
               {t('header.venue')}
             </a>
-            <a href="#" className="text-white">
+            <a href="#speaker" className="text-white">
               {t('header.speakers')}
             </a>
-            <a href="#" className="text-white">
+            {/* <a href="#" className="text-white">
               {t('header.nft')}
-            </a>
-            <a href="#" className="text-white">
+            </a> */}
+            {/* <a href="#" className="text-white">
               {t('header.sbt')}
-            </a>
-            <a href="#" className="text-white">
+            </a> */}
+            <a href="#about" className="text-white">
               {t('header.about')}
             </a>
           </div>
