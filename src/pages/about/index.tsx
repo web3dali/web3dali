@@ -138,9 +138,9 @@ export const About = () => {
                 {t('about.small_title_3')}
               </h2>
               <div className="flex flex-between mt-16">
-                <img src="/about_img_1.png" alt="" />
-                <img src="/about_img_2.png" alt="" />
-                <img src="/about_img_3.png" alt="" />
+                <img className="w-[30%]" src="/about_img_1.png" alt="" />
+                <img className="w-[30%]" src="/about_img_2.png" alt="" />
+                <img className="w-[30%]" src="/about_img_3.png" alt="" />
               </div>
             </div>
           </div>

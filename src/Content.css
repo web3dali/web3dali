@@ -15,12 +15,6 @@
   );
 }
 
-.content-camp-part {
-  display: grid;
-  grid-template-columns: 525px 1fr;
-  gap: 0px 0px;
-}
-
 fieldset {
   border: none;
   padding: 0;

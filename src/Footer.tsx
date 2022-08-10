@@ -8,8 +8,8 @@ const changeLanguage = () => {
 function Footer() {
   const { t } = useTranslation()
   return (
-    <>
-      <div className="box-container flex-between pt-12 pb-8 border-b border-white">
+    <div className="bg-black">
+      <div className="box-container flex-between pt-12 pb-8 border-b border-white text-white mt-[2rem]">
         <div className="flex gap-4">
           <img src={wamo} alt="summer of wamo" />
           <div className="flex flex-col gap-2">
@@ -44,7 +44,7 @@ function Footer() {
       <div className="flex-center text-white pt-8 pb-15">
         @ 2022 All Rights Reserved.
       </div>
-    </>
+    </div>
   )
 }
 
