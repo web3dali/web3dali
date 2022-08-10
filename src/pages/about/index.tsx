@@ -146,9 +146,9 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <div className="faq box-container mt--80 pt-6 pl-12 pr-12 pb-7">
-        <h2 className="text-[2rem] text-accent">{t('about.small_title_4')}</h2>
-        <div className="faq_list pt-3">
+      <div className="faq box-container mt--80 pt-6  pb-7">
+        <h2 className="text-[2rem] text-accent pl-12 pr-12">{t('about.small_title_4')}</h2>
+        <div className="faq_list pt-3 pl-12 pr-12">
           <div
             className="faq_li text-[#000000] text-[1.3rem]"
             style={{
