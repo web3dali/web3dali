@@ -4,6 +4,12 @@
   background-size: cover;
 }
 
+.brand {
+  justify-content: center;
+  align-items: center;
+  margin-top: .2rem;
+}
+
 .menu a {
   color: #ffffff;
 }

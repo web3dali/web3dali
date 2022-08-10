@@ -5,13 +5,12 @@ function Content() {
   const { t } = useTranslation()
   return (
     <>
-      <div className="content bg-white">
+      <div className="content bg-white" id="content">
         <div className="content-inner p-16">
           <div className="box-container">
             <h1 className="text-[4rem] text-primary hero-kid-700 pb-4">
               {t('content.title')}
             </h1>
-
             <section className="flex">
               <img src="/content_img_01.png" alt="" />
               <div className="px-9 text-[#2f2f2f] text-xl">
@@ -96,10 +95,10 @@ function Content() {
                 </fieldset>
               </div>
               <div>
-                <img src="/content_img_04.png" alt="" />
-                <img src="/content_img_05.png" alt="" />
-                <img src="/content_img_06.png" alt="" />
-                <img src="/content_img_07.png" alt="" />
+                <img className="vertical-bottom" src="/content_img_04.png" alt="" />
+                <img className="vertical-bottom" src="/content_img_05.png" alt="" />
+                <img className="vertical-bottom" src="/content_img_06.png" alt="" />
+                <img className="vertical-bottom" src="/content_img_07.png" alt="" />
               </div>
             </section>
           </div>

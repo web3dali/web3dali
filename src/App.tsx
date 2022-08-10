@@ -21,19 +21,19 @@ function App() {
       <div className="box-container h-[100vh] text-[#FFF]">
         <div className="h-16 flex-between">
           <div className="brand flex gap-4">
-            <img src={wamo} alt="" />
-            <span className="text-sm">Summer of WAMO</span>
+            <img className="h-[40px]" src={wamo} alt="" />
+            <span className="text-[1rem]">{t('hero.summer')}</span>
           </div>
           <div className="menu flex items-center gap-6 text-sm">
             <a href="#" onClick={changeLanguage}>
               中/EN
             </a>
-            <a href="#">{t('header.content')}</a>
-            <a href="#">{t('header.venue')}</a>
-            <a href="#">{t('header.speakers')}</a>
-            <a href="#">{t('header.nft')}</a>
-            <a href="#">{t('header.sbt')}</a>
-            <a href="#">{t('header.about')}</a>
+            <a href="#content">{t('header.content')}</a>
+            <a href="#venue">{t('header.venue')}</a>
+            <a href="#speaker">{t('header.speakers')}</a>
+            {/* <a href="#">{t('header.nft')}</a> */}
+            {/* <a href="#">{t('header.sbt')}</a> */}
+            <a href="#about">{t('header.about')}</a>
             <ConnectBtn label={t('header.connect')} />
           </div>
         </div>
