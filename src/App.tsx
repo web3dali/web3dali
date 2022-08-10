@@ -17,8 +17,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="hero-bg absolute top-0 left-0 w-full h-[980px] -z-1"></div>
-      <div className="box-container h-[980px]">
+      <div className="hero-bg absolute top-0 left-0 w-full h-[100vh] -z-1"></div>
+      <div className="box-container h-[100vh] text-[#FFF]">
         <div className="h-16 flex-between">
           <div className="brand flex gap-4">
             <img src={wamo} alt="" />
