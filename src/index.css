@@ -40,11 +40,24 @@ a {
   font-family: HeroKid-ExtraBoldCondensed;
   src: url('/Herokid-ExtraBoldCondensed.otf') format('opentype');
 }
-
+@font-face {
+  font-family: InterRegular;
+  src: url('./assets/font/Inter-Regular.otf') ;
+}
+@font-face {
+  font-family: InterMedium;
+  src: url('./assets/font/Inter-Medium.otf');
+}
 .hero-kid-700 {
   font-family: HeroKid-BoldCondensed;
 }
 
 .hero-kid-800 {
   font-family: HeroKid-ExtraBoldCondensed;
+}
+.inter-regular{
+  font-family: 'InterRegular';
+}
+.inter-medium{
+  font-family: 'InterMedium';
 }

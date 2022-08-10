@@ -1,0 +1,49 @@
+.about {
+    background-image: url('/wamo_content.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    /* padding-top: 248px; */
+}
+.about_inner{
+    background: linear-gradient(180deg, rgba(254, 255, 255, 0.3) 0%, #0050F9 100%);
+
+}
+.about-title {
+    text-align: center;
+    color: #0050F9;
+}
+
+.faq {
+    background: #FFFFFF;
+    box-shadow: 0px 19px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.faq_li {
+    transition: max-height 0.3s linear;
+}
+
+.roate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+
+}
+
+.roate-0 {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+
+}
+.content_left{
+    width:43%;
+}
+.content_right{
+    width: 55%;
+}
+.fw{
+    font-weight: 700;
+}
+.flex-start{
+    align-items: flex-start!important;
+}

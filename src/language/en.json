@@ -44,6 +44,34 @@
         "camp5_title": "Co-creation Camp",
         "camp5_desc": "Music camp: Musicians will be playing here. Have-fun camp: skateboards, shuttlecocks, frisbees, and poker. Culture experience camp: Dali special activities like flower cake making."
     },
+    "about": {
+        "title": "About the Summer of WAMO ",
+        "small_title_1": "MANIFESTO",
+        "small_content_1": "DAOs are bringing like-minded folks together from all around the world. We’re bonding through internet protocol, open sourcesoftware, tokens, governance, chat groups and forum proposals—and it’s all driven by the Community.",
+        "small_content_2": "We are a community dedicated to the vision of an open internet of value. A fairer and richer world for all.",
+        "small_content_3": "We’re internet natives who believe in an open internet of value. Where communities drive our world forward through transparency,",
+
+        "small_content_4": " We are people first. It’s all about people. Bet on people, have faith, back others, believe in people. Everything we do is for the community and those around us.",
+        "small_content_5": "We value being action oriented. Move fast and be willing.",
+        "small_content_6": "We thrive in chaos. We are comfortable with being uncomfortable. We grow under pressure.",
+        "small_content_7": "We back ourselves. We believe in the work we are doing.",
+        "small_content_8": " We have fun. YOLO. We have a dancing chilli as a logo.",
+        "small_title_2": "OUR ETHOS",
+        "small_content_title_1": "Transparency:",
+        "small_content_title_2": "Open Source:",
+        "small_content_title_3": "Community:",
+        "small_content_title_4": "Opportunity:",
+        "small_content_contet_1": "We want to build a process that’s verifiable and accessible to all participants out in the open",
+        "small_content_contet_2": "We want to encourage member driven contributions so all involved stakeholders have input on key collective decisions, avoiding unilateral or misrepresentative outcomes that don’t build toward the goals of the event.",
+        "small_content_contet_3": "strengthen and foster relationships between participants building toward a common goal…",
+        "small_content_contet_4": "We want to source diverse people, ideas, and perspectives by building a  a collaborative environment that’s accessible and has low barriers to entry for anyone to learn and gain from the experience.",
+        "small_title_5": "Spirit of WAMO",
+        "small_content_contet_5": "WAMO,Our mascot:",
+      
+        "small_title_3": "IDEAL ATTENDEE BREAKDOWN",
+        "small_title_4": "FAQ"
+
+    },
     "venue": {
         "title": "Venue",
         "address": "DaLi Flowers for Lifetime Farm, 大理市银桥镇大丽线新邑村委会七社8号",
