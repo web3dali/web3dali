@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+SEQUENCE:0
+PRODID:-//www.web3dali.com//web3dali v1.0//EN
+BEGIN:VEVENT
+UID:c7614cff-3549-4a00-9152-242324324
+SUMMARY;LANGUAGE=zh-cn:瓦猫之夏|Dali Web3 Summer Fest
+DESCRIPTION;LANGUAGE=zh-cn:信任、共识和热情，在这个夏天集聚起来迸发出巨大的能量怀抱着对技术的热枕、对 DAO 的治理与自组织精神的探索、 对公共物品的思考和对社区与Web3 未来的畅想
+DTSTART;TZID="China/Beijing":20220819T090000Z
+DTEND;TZID="China/Beijing":20220820T210000Z
+DTSTAMP;TZID="China/Beijing":20220819T090000Z
+LOCATION:大理市银桥镇大丽线新邑村委会七社8号
+URL:http://www.web3dali.com
+END:VEVENT
+END:VCALENDAR
