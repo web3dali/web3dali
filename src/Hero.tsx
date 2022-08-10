@@ -18,7 +18,7 @@ function Hero() {
         <a href="https://www.huodongxing.com/event/6661890942400" target="blank" className="btn btn-accent px-[2rem]">
           {t('hero.buy')}
         </a>
-        <a href="webcal://www.daliweb3.com/event.ics" className="btn btn-accent btn-accent-lg">
+        <a href="webcal://www.web3dali.com//event.ics" className="btn btn-accent btn-accent-lg">
           {t('hero.calendar')}
         </a>
       </div>
