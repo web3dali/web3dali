@@ -25,15 +25,3 @@
   color: #0050f9;
   font-size: 128px;
 }
-
-.venue {
-  background-color: #6ce4d1;
-}
-
-.connect-btn button {
-  height: 36px !important;
-  font-size: 0.875rem !important;
-  line-height: 1.25rem !important;
-  font-weight: 700 !important;
-  font-family: inherit !important;
-}

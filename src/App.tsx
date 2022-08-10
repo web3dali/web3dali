@@ -4,8 +4,9 @@ import Hero from './Hero'
 import Footer from './Footer'
 import About from './pages/about';
 import ConnectBtn from './ConnectBtn'
+import Speaker from './Speaker'
+import Venue from './Venue'
 import wamo from './assets/wamo.svg'
-import SpeakerCard from './SpeakerCard'
 import Content from './Content'
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
@@ -17,8 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="hero-bg absolute top-0 left-0 w-full h-[980px] -z-1"></div>
-      <div className="box-container h-[980px]">
+      <div className="hero-bg absolute top-0 left-0 w-full h-[100vh] -z-1"></div>
+      <div className="box-container h-[100vh] text-[#FFF]">
         <div className="h-16 flex-between">
           <div className="brand flex gap-4">
             <img src={wamo} alt="" />
@@ -34,7 +35,6 @@ function App() {
             <a href="#">{t('header.nft')}</a>
             <a href="#">{t('header.sbt')}</a>
             <a href="#">{t('header.about')}</a>
-            {/* <a href="#" className="btn btn-secondary !text-black">{t('header.connect')}</a> */}
             <ConnectBtn label={t('header.connect')} />
           </div>
         </div>
@@ -55,27 +55,9 @@ function App() {
       {/* <!-- content --> */}
       <Content />
 
-      <div className="venue p-8 ">
-        <div className="box-container">
-          <h1 className="text-[4rem] text-accent hero-kid-700">
-            {t('venue.title')}
-          </h1>
-          <p className="text-black font-bold">{t('venue.address')} </p>
-          <p className="text-black">{t('venue.since')}</p>
-          <img src="/wamo_venue.png" className="w-full" alt="" />
-        </div>
-        <div className="box-container pt-16">
-          <h1 className="text-[4rem] text-accent hero-kid-700">
-            {t('venue.speakers')}
-          </h1>
-
-          <div className="grid grid-cols-4 gap-x-8">
-            <SpeakerCard />
-            <SpeakerCard />
-            <SpeakerCard />
-            <SpeakerCard />
-          </div>
-        </div>
+      <div className="bg-[#6ce4D1] p-8">
+        <Venue />
+        <Speaker />
       </div>
       <About />
       {/* <!-- Footer --> */}

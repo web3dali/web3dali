@@ -1,4 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import './ConnectBtn.css';
 
 function ConnectBtn(props: { label: any; }) {
   const { label = 'Connect Wallet' } = props;

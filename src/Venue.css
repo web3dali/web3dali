@@ -1,0 +1,15 @@
+.venue-title {
+  font-family: 'Herokid';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100px;
+  color: #F27406;
+  margin: 0;
+}
+
+.venue-subtitle {
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 24px;
+  color: #2F2F2F;
+}
