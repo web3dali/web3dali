@@ -47,19 +47,20 @@ function Footer() {
           <div className="social mt-3 flex ">
             <img
               src="/telegram.png"
-              alt=""
+              alt="dali_web3"
               onClick={() => openSocial('https://t.me/daliweb3')}
             />
             <img
               src="/twitter.png"
-              alt=""
+              alt="@dali_web3"
               className="ml-8"
-              onClick={() => openSocial('https://dali_web3')}
+              onClick={() => openSocial('https://twitter.com/dali_web3')}
             />
             <img
               src="/jike.png"
-              title="瓦猫之夏_大理web3街会"
+              alt="瓦猫之夏_大理web3街会"
               className="ml-8"
+              onClick={() => openSocial('https://web.okjike.com/u/2B4FA9DE-D1D7-46BF-B2C0-DB16C73DDC55')}
             />
           </div>
         </div>
