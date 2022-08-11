@@ -56,6 +56,12 @@ function Footer() {
               className="ml-8"
               onClick={() => openSocial('https://twitter.com/dali_web3')}
             />
+             <img
+              src="/github.png"
+              alt="@dali_web3"
+              className="ml-8"
+              onClick={() => openSocial('https://github.com/web3dali')}
+            />
             <img
               src="/jike.png"
               alt="瓦猫之夏_大理web3街会"
