@@ -2,7 +2,7 @@
     "header": {
         "content": "内容",
         "venue": "场地",
-        "speakers": "演说者",
+        "speakers": "嘉宾",
         "nft": "NFT",
         "about": "关于",
         "sbt": "SBT",
@@ -72,7 +72,7 @@
         "title": "场地",
         "address": "花伴一生玫瑰庄园，大理市银桥镇大丽线新邑村委会七社8号",
         "since": "Since the pandemic, Web3 developer, enthusiasts and digital nomads have grown exponentially in Dali. To some extent, Dali has gradually become the Web3 center of China, especially for DAOs.",
-        "speakers": "演说者"
+        "speakers": "嘉宾"
     },
     "footer": {
         "detail": "All rights reserved @ React"
