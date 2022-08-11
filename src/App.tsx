@@ -58,7 +58,7 @@ function App() {
 
       <div className="bg-[#6ce4D1] p-8">
         <Venue />
-        <Speaker />
+        {/* <Speaker /> */}
       </div>
       <About />
       {/* <!-- Footer --> */}
