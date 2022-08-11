@@ -218,30 +218,6 @@ export const About = () => {
               </p>
             </div>
           </div>
-
-          <div
-            className="faq_li text-[#000000] text-[1.3rem] mt-8"
-            style={{
-              maxHeight: faqActive === 2 ? '10rem' : '2.6rem',
-              overflow: 'hidden'
-            }}
-            onClick={() => faqClick(2)}
-          >
-            <div className="flex flex-between inter-medium">
-              报名这次大理Web3活动有什么要求吗？
-              <img
-                src="./arrow.png"
-                alt=""
-                className={faqActive === 2 ? 'roate-180' : 'roate-0'}
-              />
-            </div>
-            <div className="pt-2">
-              <p>
-                原则上没有特殊要求，如果活动限制名额的话，3 个 Web3
-                活动预热群的小伙伴都是可以报上名的
-              </p>
-            </div>
-          </div>
           <div
             className="faq_li text-[#000000] text-[1.3rem] mt-8"
             style={{
@@ -251,7 +227,7 @@ export const About = () => {
             onClick={() => faqClick(3)}
           >
             <div className="flex flex-between inter-medium">
-              什么时候出来正式报名链接？
+              在哪里可以找到正式报名链接？
               <img
                 src="./arrow.png"
                 alt=""
@@ -260,7 +236,9 @@ export const About = () => {
             </div>
             <div className="pt-2">
               <p>
-                正式活动报名链接需要在8月7日左右出来，到时候在活动行上统一报名
+                <a href="https://www.huodongxing.com/event/6661890942400">
+                  活动行购票链接
+                </a>
               </p>
             </div>
           </div>
@@ -282,8 +260,8 @@ export const About = () => {
             </div>
             <div className="pt-2">
               <p>
-                活动报名费用约500元/张，
-                没有当日票，只有2天通票，具体有没有优惠票或者购买多张门票优惠，可以以活动行上面的提醒信息为准
+                活动报名费用为499元/张，
+                没有当日票，只有2天通票，以活动行上面的提醒信息为准
               </p>
             </div>
           </div>
@@ -305,7 +283,10 @@ export const About = () => {
             </div>
             <div className="pt-2">
               <p>
-                不是的，报名共建者后，需要提交正式发起的活动文案，并且通过Web3主题营地相关小组的审核通过后，出现在主题营地的正式对外活动名单上，才可以免门票的
+                我们为每一位核心共建者都提供了免费门票，详情可以咨询瓦猫之夏团队。
+              </p>
+              <p>
+                主题营地的共建者请联系相关营地主理人，以确定自己是否可以得到免费票/折扣票。
               </p>
             </div>
           </div>
