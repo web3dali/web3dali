@@ -5,6 +5,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  /* background-color: #0050f9; */
 }
 
 .hero-bg {
@@ -46,4 +47,9 @@
   width:2rem;
   height:2rem;
   cursor: pointer;
+}
+.footer-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
