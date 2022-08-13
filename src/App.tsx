@@ -9,6 +9,7 @@ import Venue from './Venue'
 import wamo from './assets/wamo.svg'
 import Content from './Content'
 import Sponsors from './pages/sponsors';
+import NFT from './pages/nft';
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import { useEffect } from 'react'
@@ -144,6 +145,7 @@ function App() {
         <Venue />
         {/* <Speaker /> */}
       </div>
+      <NFT />
       <About />
       <Sponsors />
       {/* <!-- Footer --> */}

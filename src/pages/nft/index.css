@@ -1,0 +1,43 @@
+.nft {
+  margin-bottom: -53px;
+}
+
+.nft-mint {
+  border-radius: 74px 0 0 74px;
+  background: #FFFFFF;
+  box-shadow: -10px 30px 18px rgba(0, 0, 0, 0.12);
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.nft-img-row {
+  align-items: center;
+  justify-content: center;
+}
+
+.nft-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 70px;
+  padding: 0 10px;
+}
+
+.nft-mint-title {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+}
+
+.nft-mint-info {
+  background: #F5F5F5;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.nft-mint-rule {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
