@@ -13,7 +13,7 @@
         "event": "活动",
         "summer": "瓦猫之夏",
         "dali": "大理 Web3 街(gāi)会",
-        "time": "2022年 8月 19日-20日",
+        "time": "2022年 8月19日- 20日",
         "farm": "@大理花伴一生玫瑰庄园",
         "buy": "购票",
         "calendar": "添加到日历",
@@ -82,5 +82,13 @@
         "hot_recommended": "Hot Recommended",
         "new_arrival": "New arrival",
         "joint_venture": "Joint Venture"
+    },
+    "sponsors":{
+        "title1": "WAGMI赞助商",
+        "title2": "LFG赞助商",
+        "title3": "专项赞助商",
+        "title4": "媒体支持"
+
+
     }
 }

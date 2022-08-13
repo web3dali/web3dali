@@ -92,5 +92,12 @@
         "hot_recommended": "Hot Recommended",
         "new_arrival": "New arrival",
         "joint_venture": "Joint Venture"
+    },
+    "sponsors":{
+        "title1": "Gold Sponsors",
+        "title2": "Silver Sponsors",
+        "title3": "Sponsors",
+        "title4": "Media"
+
     }
 }

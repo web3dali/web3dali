@@ -146,7 +146,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-      <div className="faq box-container mt--80 pt-6  pb-7">
+      <div className="faq box-container mt--80 pt-6  pb-7 bg-white">
         <h2 className="text-[2rem] text-accent pl-12 pr-12">
           {t('about.small_title_4')}
         </h2>
