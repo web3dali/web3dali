@@ -86,7 +86,7 @@
         "joint_venture": "Joint Venture"
     },
     "sponsors":{
-        "title": "赞助商",
+        "title": "赞助",
         "title1": "WAGMI赞助商",
         "title2": "LFG赞助商",
         "title3": "PARTY赞助商",
@@ -96,7 +96,7 @@
         "fq_title3": " 欢迎派对",
 
         "fq_content_3_1": "所有演讲者、赞助商和Tier 1&2 Mirror NFT持有人将被邀请参加活动前的特别欢迎排队。",
-        "fq_content_3_2": "查看更多细节。"
+        "fq_content_3_2": "查看更多细节"
 
 
     }
