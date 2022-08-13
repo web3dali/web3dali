@@ -6,7 +6,9 @@
         "nft": "NFT",
         "about": "About",
         "sbt": "SBT",
-        "connect": "Connect Wallet"
+        "connect": "Connect Wallet",
+        "sponsor": "Sponsor",
+        "media":"Media"
 
     },
     "hero": {
@@ -94,10 +96,18 @@
         "joint_venture": "Joint Venture"
     },
     "sponsors":{
-        "title1": "Gold Sponsors",
-        "title2": "Silver Sponsors",
-        "title3": "Sponsors",
-        "title4": "Media"
+        "title": "Sponsors",
+        "title1": "WAGMI Sponsors",
+        "title2": "LFG Sponsors",
+        "title3": "PART Sponsors",
+        "title4": "Media",
+        "fq_title1": "Why Join Us",
+        "fq_title2": "Sponsorship",
+        "fq_title3": "Welcoming Party",
+        "fq_content_1_1": "欢迎您加入我们，成为我们的赞助商。在Web3这样一样去中心化的世界里，我们和赞助伙伴的合作不仅是商业上的往来，更是价值观的交汇。您的每一笔赞助将获得全面的商业回报，同时它也在为Web3 这样一个开放、多元、自由的社区添砖加瓦。",
+
+        "fq_content_3_1": "All speakers, sponsors and Tier 1&2  Mirror NFT holders will be invted to special welcoming party before the event.",
+        "fq_content_3_2": " More details"
 
     }
 }

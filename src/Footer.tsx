@@ -45,13 +45,22 @@ function Footer() {
           <img src={wamo} alt="summer of wamo" />
           <div className="flex gap-4">
             <div className="flex flex-col gap-2">
-              <div className="mt-4 text-lg center" style={{textAlign:'center'}}>Summer of WAMO</div>
-              <div className='text-lg'>A Web3 Fest in Dali</div>
+              <div
+                className="mt-4 text-lg center"
+                style={{ textAlign: 'center' }}
+              >
+                Summer of WAMO
+              </div>
+              <div className="text-lg">A Web3 Fest in Dali</div>
             </div>
           </div>
           <div>
             <div className="flex items-center gap-x-8 mt-5">
-              <a href="#" className="text-white text-lg" onClick={changeLanguage}>
+              <a
+                href="#"
+                className="text-white text-lg"
+                onClick={changeLanguage}
+              >
                 中 / EN
               </a>
               <a href="#content" className="text-white text-lg">
@@ -63,6 +72,12 @@ function Footer() {
               <a href="#speaker" className="text-white text-lg">
                 {t('header.speakers')}
               </a>
+              <a href="#sponsor" className="text-white text-lg">
+                {t('header.sponsor')}
+              </a>
+              <a href="#media" className="text-white text-lg">
+                {t('header.media')}
+              </a>
               {/* <a href="#" className="text-white">
               {t('header.nft')}
             </a> */}
@@ -73,7 +88,10 @@ function Footer() {
                 {t('header.about')}
               </a>
             </div>
-            <div className="social mt-3 flex mt-5" style={{justifyContent:'center' }}>
+            <div
+              className="social mt-3 flex mt-5"
+              style={{ justifyContent: 'center' }}
+            >
               <img
                 src="/telegram.png"
                 alt="dali_web3"
@@ -98,6 +116,16 @@ function Footer() {
                 onClick={() =>
                   openSocial(
                     'https://web.okjike.com/u/2B4FA9DE-D1D7-46BF-B2C0-DB16C73DDC55'
+                  )
+                }
+              />
+               <img
+                src="/mirr.png"
+                alt="@dali_web3"
+                className="ml-8"
+                onClick={() =>
+                  openSocial(
+                    'https://mirror.xyz/web3dali.eth'
                   )
                 }
               />
@@ -126,6 +154,12 @@ function Footer() {
               </a>
               <a href="#speaker" className="text-white">
                 {t('header.speakers')}
+              </a>
+              <a href="#sponsor" className="text-white ">
+                {t('header.sponsor')}
+              </a>
+              <a href="#media" className="text-white ">
+                {t('header.media')}
               </a>
               {/* <a href="#" className="text-white">
               {t('header.nft')}
@@ -162,6 +196,16 @@ function Footer() {
                 onClick={() =>
                   openSocial(
                     'https://web.okjike.com/u/2B4FA9DE-D1D7-46BF-B2C0-DB16C73DDC55'
+                  )
+                }
+              />
+               <img
+                src="/mirr.png"
+                alt="@dali_web3"
+                className="ml-8"
+                onClick={() =>
+                  openSocial(
+                    'https://mirror.xyz/web3dali.eth'
                   )
                 }
               />

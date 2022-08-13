@@ -6,7 +6,9 @@
         "nft": "NFT",
         "about": "关于",
         "sbt": "SBT",
-        "connect": "连接钱包"
+        "connect": "连接钱包",
+        "sponsor": "赞助",
+        "media":"媒体"
     },
 
     "hero": {
@@ -84,10 +86,17 @@
         "joint_venture": "Joint Venture"
     },
     "sponsors":{
+        "title": "赞助商",
         "title1": "WAGMI赞助商",
         "title2": "LFG赞助商",
-        "title3": "专项赞助商",
-        "title4": "媒体支持"
+        "title3": "PARTY赞助商",
+        "title4": "媒体支持",
+        "fq_title1": "为什么要成为赞助商",
+        "fq_title2": "赞助方式",
+        "fq_title3": " 欢迎派对",
+
+        "fq_content_3_1": "所有演讲者、赞助商和Tier 1&2 Mirror NFT持有人将被邀请参加活动前的特别欢迎排队。",
+        "fq_content_3_2": "查看更多细节。"
 
 
     }

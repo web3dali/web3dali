@@ -8,7 +8,7 @@ import Speaker from './Speaker'
 import Venue from './Venue'
 import wamo from './assets/wamo.svg'
 import Content from './Content'
-import Sponsors from './pages/sponsors';
+import Sponsors from './pages/sponsors'
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import { useEffect } from 'react'
@@ -17,13 +17,12 @@ const changeLanguage = () => {
 }
 
 function App() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   useEffect(() => {
-    if(i18n.language == 'en'){
-      document.title="Summer of Wamo|Dali Web3 Fest"
-    }else{
-      document.title="瓦猫之夏|大理Web3街会"
-      
+    if (i18n.language == 'en') {
+      document.title = 'Summer of Wamo|Dali Web3 Fest'
+    } else {
+      document.title = '瓦猫之夏|大理Web3街会'
     }
   }, [i18n])
   const isMobile = () => {
@@ -83,7 +82,8 @@ function App() {
                   <a href="#content">{t('header.content')}</a>
                   <a href="#venue">{t('header.venue')}</a>
                   <a href="#speaker">{t('header.speakers')}</a>
-
+                  <a href="#sponsor">{t('header.sponsor')}</a>
+                  <a href="#media">{t('header.media')}</a>
                   <a href="#about">{t('header.about')}</a>
                   <ConnectBtn label={t('header.connect')} />
                 </div>
@@ -97,6 +97,8 @@ function App() {
                 <a href="#content">{t('header.content')}</a>
                 <a href="#venue">{t('header.venue')}</a>
                 <a href="#speaker">{t('header.speakers')}</a>
+                <a href="#sponsor">{t('header.sponsor')}</a>
+                <a href="#media">{t('header.media')}</a>
                 <a href="#about">{t('header.about')}</a>
               </div>
             )}

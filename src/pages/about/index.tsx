@@ -46,25 +46,25 @@ export const About = () => {
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_1')}
-                          </span>{' '}{' '}
+                          </span>{' '}
                           {t('about.small_content_contet_1')}
                         </p>
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_2')}
-                          </span>{' '}{' '}
+                          </span>{' '}
                           {t('about.small_content_contet_2')}
                         </p>
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_3')}
-                          </span>{' '}{' '}
+                          </span>{' '}
                           {t('about.small_content_contet_3')}
                         </p>
                         <p>
                           <span className="text-[#000000] text-2xl fw">
                             {t('about.small_content_title_4')}
-                          </span>{' '}{' '}
+                          </span>{' '}
                           {t('about.small_content_contet_4')}
                         </p>
                       </div>
@@ -154,7 +154,7 @@ export const About = () => {
           <div
             className="faq_li text-[#000000] text-[1.3rem]"
             style={{
-              maxHeight: faqActive === 0 ? '30rem' : '2.6rem',
+              maxHeight: faqActive === 0 ? '35rem' : '2.6rem',
               overflow: 'hidden'
             }}
             onClick={() => faqClick(0)}
@@ -310,6 +310,40 @@ export const About = () => {
             <div className="pt-2">
               <p>
                 通过受邀加入我们的预热大群。或者加入Telegram官方群：https://t.me/Web3Dali
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="faq_li text-[#000000] text-[1.3rem] mt-8"
+            style={{
+              maxHeight: faqActive === 7 ? '21rem' : '2.6rem',
+              overflow: 'hidden'
+            }}
+            onClick={() => faqClick(7)}
+          >
+            <div className="flex flex-between inter-medium">
+              作为项目方/机构有哪些合作方式？
+              <img
+                src="./arrow.png"
+                alt=""
+                className={faqActive === 7 ? 'roate-180' : 'roate-0'}
+              />
+            </div>
+            <div className="pt-2">
+              <p>目前的合作方式有： </p>
+              <p>商业赞助：通过有偿赞助获得会务、宣传曝光、展位使用等权益 </p>
+              <p>
+                {' '}
+                捐赠：大会筹备以去中心化的形式组织，不以盈利为目的，希望你为我们捐赠经费以覆盖场地、设备、演出等项目的开支，共同建设社区
+              </p>
+              <p>
+                {' '}
+                议程提报：任何有想法的共建者都可以提报自己想要在主题营地分享的内容和形式。
+              </p>
+              <p>
+                {' '}
+                志愿者工作：我们始终欢迎你以个人身份加入大会筹备组，贡献自己的一份力量。报名信息可见链接
               </p>
             </div>
           </div>
