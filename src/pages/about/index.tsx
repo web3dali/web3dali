@@ -7,7 +7,10 @@ export const About = () => {
   const { t } = useTranslation()
   const [faqActive, setFaqActive] = useState(10)
   const faqClick = (i: number) => {
-    console.log(i)
+    if (i === faqActive) {
+      setFaqActive(10)
+      return
+    }
     setFaqActive(i)
   }
   return (

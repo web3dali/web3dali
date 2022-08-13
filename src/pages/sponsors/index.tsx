@@ -6,7 +6,10 @@ import i18n from 'i18next'
 export const About = () => {
   const [faqActive, setFaqActive] = useState(10)
   const faqClick = (i: number) => {
-    console.log(i)
+    if (i === faqActive) {
+      setFaqActive(10)
+      return
+    }
     setFaqActive(i)
   }
   const { t } = useTranslation()
@@ -153,7 +156,7 @@ export const About = () => {
               <div
                 className="faq_li text-[#000000] text-[1.3rem] mt-8"
                 style={{
-                  maxHeight: faqActive === 2 ? '75rem' : '2.6rem',
+                  maxHeight: faqActive === 2 ? '15rem' : '2.6rem',
                   overflow: 'hidden'
                 }}
                 onClick={() => faqClick(2)}
@@ -170,7 +173,11 @@ export const About = () => {
                   <p style={{ lineHeight: '1.5' }}>
                     {t('sponsors.fq_content_3_1')}
                     <a
-                      style={{ cursor: 'pointer',textDecoration:'underline' ,color:'#000'}}
+                      style={{
+                        cursor: 'pointer',
+                        textDecoration: 'underline',
+                        color: '#000'
+                      }}
                       target="_blank"
                       href="https://mirror.xyz/web3dali.eth/crowdfunds/0xa597fc52f7D46790ff204ca4D741143e087AA05b"
                     >
