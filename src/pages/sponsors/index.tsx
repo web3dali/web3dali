@@ -17,12 +17,12 @@ export const About = () => {
   return (
     <div className="sponsors mt--58">
       <div className="sponsors_bg1"></div>
-      <div className="sponsors_inner pt-100 pb-30">
-        <div className="box-container ">
-          <h2
-            className="text-[2.5rem] about-title hero-kid-700 text-[#000]"
-            id="sponsor"
-          >
+      {/* <div style={{ height: '25rem' }} ></div> */}
+
+      <div className="sponsors_inner pb-30 " >
+        <div className="box-container pt-90" >
+          <div id="sponsor"></div>
+          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] " >
             {t('sponsors.title')}
           </h2>
           <div className="sponsor_faq box-container mt-15 pt-6  pb-7 ">
@@ -188,10 +188,7 @@ export const About = () => {
               </div>
             </div>
           </div>
-          <h2
-            className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-30"
-            id="sponsor"
-          >
+          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-30">
             {t('sponsors.title1')}
           </h2>
           <div className="flex-between mt-15">
@@ -252,10 +249,10 @@ export const About = () => {
             </div>
             <div className="sponsors-img-empty"></div>
           </div>
-
+          <div id="media" className='pt-45'></div>
           <h2
-            className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-45"
-            id="media"
+            className="text-[2.5rem] about-title hero-kid-700 text-[#000] "
+            
           >
             {t('sponsors.title4')}
           </h2>

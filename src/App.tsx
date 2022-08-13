@@ -12,6 +12,7 @@ import Sponsors from './pages/sponsors'
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import { useEffect } from 'react'
+
 const changeLanguage = () => {
   i18n.changeLanguage(i18n.language == 'en' ? 'zh' : 'en')
 }
@@ -53,7 +54,17 @@ function App() {
     }
     return mobile_flag
   }
-  useEffect(() => {}, [])
+  useEffect(() => {
+    const hrefArr: any = location.href.split('#')
+
+    if (hrefArr.length > 1) {
+
+      document
+        .querySelector<HTMLElement>(`#${hrefArr[1]}`)!
+        .scrollIntoView(true)
+    }
+    // document.querySelector("#header").scrollIntoView(true);
+  }, [])
   return (
     <div className="App bg-[#fff]">
       <div className="text-[#FFF] w-full">
