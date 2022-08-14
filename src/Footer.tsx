@@ -38,6 +38,12 @@ function Footer() {
     }
     return mobile_flag
   }
+  const jump = (a: string) => {
+    document.querySelector<HTMLElement>(a)!.scrollIntoView({
+      behavior: 'smooth', // 平滑过渡
+      block: 'start' // 上边框与视窗顶部平齐。默认值
+    })
+  }
   return (
     <div className="bg-black">
       {isMobile() ? (
@@ -63,28 +69,23 @@ function Footer() {
               >
                 中 / EN
               </a>
-              <a href="#content" className="text-white text-lg">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#content')} className="text-white text-lg">
                 {t('header.content')}
               </a>
-              <a href="#venue" className="text-white text-lg">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#venue')} className="text-white text-lg">
                 {t('header.venue')}
               </a>
-              <a href="#speaker" className="text-white text-lg">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}  className="text-white text-lg">
                 {t('header.speakers')}
               </a>
-              <a href="#sponsor" className="text-white text-lg">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}  className="text-white text-lg">
                 {t('header.sponsor')}
               </a>
-              <a href="#media" className="text-white text-lg">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#media')}  className="text-white text-lg">
                 {t('header.media')}
               </a>
-              {/* <a href="#" className="text-white">
-              {t('header.nft')}
-            </a> */}
-              {/* <a href="#" className="text-white">
-              {t('header.sbt')}
-            </a> */}
-              <a href="#about" className="text-white text-lg">
+           
+              <a style={{cursor:'pointer'}} onClick={() => jump('#about')}  className="text-white text-lg">
                 {t('header.about')}
               </a>
             </div>
@@ -146,28 +147,23 @@ function Footer() {
               <a href="#" className="text-white" onClick={changeLanguage}>
                 中 / EN
               </a>
-              <a href="#content" className="text-white">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#content')} className="text-white">
                 {t('header.content')}
               </a>
-              <a href="#venue" className="text-white">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#venue')} className="text-white">
                 {t('header.venue')}
               </a>
-              <a href="#speaker" className="text-white">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}  className="text-white">
                 {t('header.speakers')}
               </a>
-              <a href="#sponsor" className="text-white ">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}  className="text-white">
                 {t('header.sponsor')}
               </a>
-              <a href="#media" className="text-white ">
+              <a style={{cursor:'pointer'}} onClick={() => jump('#media')}  className="text-white">
                 {t('header.media')}
               </a>
-              {/* <a href="#" className="text-white">
-              {t('header.nft')}
-            </a> */}
-              {/* <a href="#" className="text-white">
-              {t('header.sbt')}
-            </a> */}
-              <a href="#about" className="text-white">
+           
+              <a style={{cursor:'pointer'}} onClick={() => jump('#about')}  className="text-white">
                 {t('header.about')}
               </a>
             </div>
