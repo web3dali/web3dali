@@ -312,7 +312,7 @@ export const About = () => {
             </div>
             <div className="pt-2">
               <p>
-                通过受邀加入我们的预热大群。或者加入Telegram官方群：https://t.me/Web3Dali
+                通过受邀加入我们的预热大群。或者加入Telegram官方群：https://t.me/daliweb3
               </p>
             </div>
           </div>
