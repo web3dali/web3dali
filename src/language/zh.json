@@ -8,6 +8,10 @@
         "sbt": "SBT",
         "connect": "连接钱包"
     },
+    
+    "nft": {
+        "freeMint": "Free Mint"
+    },
 
     "hero": {
         "event": "活动",

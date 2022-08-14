@@ -1,0 +1,27 @@
+{
+  "merkleRoot": "0x27bcdb24cf367eb51f8120adc9c12e27e55f5593cf32baf1b8c587ada9cf303d",
+  "tokenTotal": "0x0c",
+  "claims": {
+    "0x158Ea94E633922Cc32EbD8735B87022bfDe7084f": {
+      "index": 0,
+      "amount": "0x04",
+      "proof": [
+        "0x562ecb8306c2ffa6a9af8acbb68230a24ba5e8357b511a3201a1e2b633b562c4",
+        "0x583953903f803b7901f33abb9b923a1164f61e16646947627447e1bc45762499"
+      ]
+    },
+    "0xA7075d92Ea40788F678500C4342792e373638b96": {
+      "index": 1,
+      "amount": "0x04",
+      "proof": [
+        "0x077f5c2952cefcf8422894d9e753e4100922b06a18690ecf81cb7c29cd3bc3f7",
+        "0x583953903f803b7901f33abb9b923a1164f61e16646947627447e1bc45762499"
+      ]
+    },
+    "0xc7Db5bae5d0339daAA0c9351302dB28460216bfa": {
+      "index": 2,
+      "amount": "0x04",
+      "proof": ["0x5e7eeb316c43cce15f878b7fbde5acc2687fd1b0d80ef041a5fa6f6aad8207f5"]
+    }
+  }
+}
