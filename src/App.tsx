@@ -55,9 +55,9 @@ function App() {
     return mobile_flag
   }
   useEffect(() => {
-    const hrefArr: any = location.href.split('#')
-
-    if (hrefArr.length > 1) {
+    const hrefArr: any = location.href.split('#') || []
+    console.log(hrefArr)
+    if (hrefArr.length > 1 && hrefArr[1].length>1) {
 
       document
         .querySelector<HTMLElement>(`#${hrefArr[1]}`)!
