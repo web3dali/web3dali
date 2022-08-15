@@ -42,8 +42,8 @@ function preMint(props) {
           upHandler={<div>+</div>}
           downHandler={<div>-</div>} />
       </div>
-      <div className="nft-mint-btn flex mt-[16px]">
-        <button disabled={true} className="btn btn-accent px-[1.5rem] mt-[-2px] mr-[24px]">{t('nft.freeMint')}</button>
+      <div className="nft-mint-btn pre-mint-btn flex mt-[16px]">
+        <button disabled={true} className="btn btn-disable mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button>
         <ConnectBtn label={t('header.connect')} />
       </div>
     </>

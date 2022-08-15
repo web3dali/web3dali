@@ -69,6 +69,9 @@ function mint(props: { address: any; contract: any; claim: any; }) {
   const { isLoading, isSuccess } = useWaitForTransaction({
     hash: mintResult?.hash,
   });
+
+  const mintBtnDisabled = !freeMint || numToMint <= 0 || isLoading;
+
   return (
     <>
       <div className="nft-mint-info flex flex-row w-[70%] flex-between mt-[40px]">
@@ -96,7 +99,7 @@ function mint(props: { address: any; contract: any; claim: any; }) {
           downHandler={<div>-</div>} />
       </div>
       <div className="nft-mint-btn flex mt-[16px]">
-        <button disabled={!freeMint || numToMint <= 0 || isLoading} className="btn btn-accent px-[1.5rem] mt-[-2px] mr-[24px]" onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>{t('nft.freeMint')}</button>
+        <button disabled={mintBtnDisabled} className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: mintBtnDisabled ? 'gray' : ''}} onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>{t('nft.freeMint')}</button>
         <ConnectBtn label={t('header.connect')} />
       </div>
       {isSuccess && (

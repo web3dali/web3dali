@@ -63,12 +63,32 @@
   transform-origin: center;
 }
 
-.nft-mint-btn [data-rk] .ju367v7i {
+/* .nft-mint-btn [data-rk] .ju367v7i {
   padding-right: 2rem;
 }
 
 .nft-mint-btn [data-rk] .ju367v6x {
   padding-left: 2rem;
+} */
+
+.nft-mint-btn button {
+  font-size: 1rem;
+  border-width: 0;
+}
+
+.nft-mint-btn button:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  transition: 0.125s ease;
+}
+
+.nft-mint-btn .btn {
+  padding: 0 4rem;
+}
+
+.pre-mint-btn button {
+  color: white !important;
+  padding: 0 4rem !important;
 }
 
 .nft-mint-rule {
