@@ -59,10 +59,11 @@ function NFT() {
   const { config, error } = usePrepareContractWrite({
     ...CONTRACT,
     functionName: 'preSalesMint',
-    args: [2, 1, 4, [
-      "0x077f5c2952cefcf8422894d9e753e4100922b06a18690ecf81cb7c29cd3bc3f7",
-      "0x583953903f803b7901f33abb9b923a1164f61e16646947627447e1bc45762499"
-    ] ],
+    // args: [2, 1, 4, [
+    //   "0x077f5c2952cefcf8422894d9e753e4100922b06a18690ecf81cb7c29cd3bc3f7",
+    //   "0x583953903f803b7901f33abb9b923a1164f61e16646947627447e1bc45762499"
+    // ] ],
+    args: [myClaim?.index, numToMint, maxMintNum, myClaim?.proof],
     overrides: {
       gasLimit: parseEther('0.01'),
     }
