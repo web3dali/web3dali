@@ -75,9 +75,9 @@ function Footer() {
               <a style={{cursor:'pointer'}} onClick={() => jump('#venue')} className="text-white text-lg">
                 {t('header.venue')}
               </a>
-              <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}  className="text-white text-lg">
+              {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}  className="text-white text-lg">
                 {t('header.speakers')}
-              </a>
+              </a> */}
               <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}  className="text-white text-lg">
                 {t('header.sponsor')}
               </a>
@@ -153,9 +153,9 @@ function Footer() {
               <a style={{cursor:'pointer'}} onClick={() => jump('#venue')} className="text-white">
                 {t('header.venue')}
               </a>
-              <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}  className="text-white">
+              {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}  className="text-white">
                 {t('header.speakers')}
-              </a>
+              </a> */}
               <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}  className="text-white">
                 {t('header.sponsor')}
               </a>

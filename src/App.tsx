@@ -101,7 +101,7 @@ function App() {
                   </a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a>
+                  {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
                   <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#about')}>{t('header.about')}</a>
@@ -113,7 +113,7 @@ function App() {
               <div className="menu flex-between gap-6 pl-45 pr-34 text-[1.2rem] mt-6">
                   <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a>
+                  {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
                   <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#about')}>{t('header.about')}</a>
