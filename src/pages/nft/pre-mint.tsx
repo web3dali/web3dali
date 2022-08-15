@@ -29,11 +29,11 @@ function preMint(props: { contract: any; }) {
         </div>
         <div>
           <div className="mb-[30px]">Free Mint</div>
-          <div><strong className="text-[36px]">?</strong></div>
+          <div><strong className="text-[36px]">0</strong></div>
         </div>
         <div>
           <div className="mb-[30px]">Asset</div>
-          <div><strong className="text-[36px]">?</strong></div>
+          <div><strong className="text-[36px]">0</strong></div>
         </div>
       </div>
       <div className="nft-mint-num mt-[16px]">
@@ -43,7 +43,7 @@ function preMint(props: { contract: any; }) {
           downHandler={<div>-</div>} />
       </div>
       <div className="nft-mint-btn pre-mint-btn flex mt-[16px]">
-        <button disabled={true} className="btn btn-disable mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button>
+        <button disabled={true} className="btn mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button>
         <ConnectBtn label={t('header.connect')} />
       </div>
     </>
