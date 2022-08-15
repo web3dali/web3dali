@@ -13,6 +13,9 @@ export const About = () => {
     setFaqActive(i)
   }
   const { t } = useTranslation()
+  const openSponsors = (href:string) => {
+    window.open(href)
+  }
   // sponsors pt-100 mt--58 bg-white
   return (
     <div className="sponsors mt--58">
@@ -254,7 +257,6 @@ export const About = () => {
                       the Street Fair, so please be aware of suspected
                       information scams.
                     </p>
-                  
                   </div>
                 ) : (
                   <div className="pt-2">
@@ -324,7 +326,7 @@ export const About = () => {
               <div
                 className="faq_li text-[#000000] text-[1.3rem] mt-8"
                 style={{
-                  maxHeight: faqActive === 2 ? '15rem' : '2.6rem',
+                  maxHeight: faqActive === 2 ? '35rem' : '2.6rem',
                   overflow: 'hidden'
                 }}
                 onClick={() => faqClick(2)}
@@ -339,7 +341,7 @@ export const About = () => {
                 </div>
                 <div className="pt-2">
                   <p style={{ lineHeight: '1.5' }}>
-                    {t('sponsors.fq_content_3_1')}
+                    {t('sponsors.fq_content_3_1')}{' '}
                     <a
                       style={{
                         cursor: 'pointer',
@@ -352,6 +354,21 @@ export const About = () => {
                       {t('sponsors.fq_content_3_2')}
                     </a>
                   </p>
+
+                  <p style={{ lineHeight: '1.5' }}>
+                    {t('sponsors.fq_content_3_3')}{' '}
+                    <a
+                      style={{
+                        cursor: 'pointer',
+                        textDecoration: 'underline',
+                        color: '#000'
+                      }}
+                      target="_blank"
+                      href="https://telegram.me/collablandbot?start=VFBDI1RFTCNDT01NIy0xMDAxMzkwNjk2NDIz"
+                    >
+                      {t('sponsors.fq_content_3_4')}
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -360,10 +377,18 @@ export const About = () => {
             {t('sponsors.title1')}
           </h2>
           <div className="flex-between mt-15">
-            <div className="sponsors-img-height">
+            <div
+              className="sponsors-img-height"
+              onClick={() => openSponsors('https://drklab.net/')}
+              style={{cursor:'pointer'}}
+            >
               <img src="/w1.png" alt="" className="" />
             </div>
-            <div className="sponsors-img-height">
+            <div
+              className="sponsors-img-height"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://greenpillcn.notion.site/')}
+            >
               <img src="/w2.png" alt="" />
             </div>
             {/* <img src="" alt="" className='sponsors-img' /> */}
@@ -374,32 +399,64 @@ export const About = () => {
             {t('sponsors.title2')}
           </h2>
           <div className="flex-between mt-20">
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('http://hotpot.network')}
+            >
               <img src="/l1.png" alt="" />
             </div>
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('http://www.nuo2069.com')}
+            >
               <img src="/l5.png" alt="" />
             </div>
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://www.realapp.xyz/')}
+            >
               <img src="/l8.png" alt="" />
             </div>
           </div>
           <div className="flex-between mt-15">
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://destroyand.com')}
+            >
               <img src="/l4.png" alt="" />
             </div>
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://www.zecrey.com/')}
+            >
               <img src="/l6.png" alt="" />
             </div>
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://www.kava.io/')}
+            >
               <img src="/l3.png" alt="" />
             </div>
           </div>
           <div className="flex-between mt-20">
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://starcoin.org')}
+            >
               <img src="/l7.png" alt="" />
             </div>
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://www.zhejianglab.com/')}
+            >
               <img src="/l2.png" alt="" />
             </div>
             <div className="sponsors-img-empty"></div>
@@ -410,9 +467,13 @@ export const About = () => {
           </h2>
           <div className="flex-between mt-20">
             <div className="sponsors-img">
-              <img src="/z1.png" alt="" />
+              <img src="/z1.png" alt="" onClick={() => openSponsors('')} />
             </div>
-            <div className="sponsors-img">
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://gamefi.ask4coin.com')}
+            >
               <img src="/z2.png" alt="" />
             </div>
             <div className="sponsors-img-empty"></div>
