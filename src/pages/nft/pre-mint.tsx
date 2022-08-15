@@ -4,7 +4,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import { useContractReads, useAccount, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from 'wagmi'
 
 
-function preMint(props) {
+function preMint(props: { contract: any; }) {
   const { t } = useTranslation();
   const { contract } = props;
   const { data, isError } = useContractReads({
@@ -25,7 +25,7 @@ function preMint(props) {
         </div>
         <div>
           <div className="mb-[30px]">Available</div>
-          <div><strong className="text-[36px]">{ data?.[0] ? (data?.[0] - data?.[1]) : 3706 }</strong></div>
+          <div><strong className="text-[36px]">{ data?.[0] ? ((data?.[0] as unknown as number) - (data?.[1] as unknown as number)) : 3706 }</strong></div>
         </div>
         <div>
           <div className="mb-[30px]">Free Mint</div>
