@@ -3,12 +3,15 @@ import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import ConnectBtn from '../../ConnectBtn';
 import InputNumber from 'rc-input-number';
+import Dialog from 'rc-dialog';
 import './index.css'
 import 'rc-input-number/assets/index.css'
+import 'rc-dialog/assets/index.css'
 
 import { useContractReads, useAccount, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from 'wagmi'
 import { BigNumber } from 'ethers';
 import { parseEther, parseUnits } from 'ethers/lib/utils';
+import React from 'react';
 
 const etherscanHOST = 'https://rinkeby.etherscan.io';
 
@@ -66,9 +69,14 @@ function mint(props: { address: any; contract: any; claim: any; }) {
 
   console.debug('useContractWrite', { freeMint });
 
-  const { isLoading, isSuccess } = useWaitForTransaction({
+  let { isLoading, isSuccess } = useWaitForTransaction({
     hash: mintResult?.hash,
   });
+
+  // isLoading = true;
+  // isSuccess = true;
+
+  const [dialogVisible, setDialogVisible] = React.useState(true);
 
   const mintBtnDisabled = !freeMint || numToMint <= 0 || isLoading;
 
@@ -99,20 +107,18 @@ function mint(props: { address: any; contract: any; claim: any; }) {
           downHandler={<div>-</div>} />
       </div>
       <div className="nft-mint-btn flex mt-[16px]">
-        <button disabled={mintBtnDisabled} className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: mintBtnDisabled ? 'gray' : ''}} onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>{t('nft.freeMint')}</button>
+        <button disabled={mintBtnDisabled} className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: mintBtnDisabled ? 'gray' : ''}} onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>{isLoading ? t('nft.minting') : t('nft.freeMint')}</button>
         <ConnectBtn label={t('header.connect')} />
       </div>
       {isSuccess && (
-        <div>
-          Successfully minted your NFT!
-          <div>
-            <a href={`${etherscanHOST}/tx/${mintResult?.hash}`}>Etherscan</a>
-          </div>
-        </div>
+        <Dialog title={"WAMO NFT MINT"} visible={dialogVisible} className="w-"
+          footer={(<div className="btn btn-secondary text-center color-[white]" key="ok" onClick={() => { setDialogVisible(false)}}>OK</div>)}>
+          <p>Successfully minted! Check it on <a href={`${etherscanHOST}/tx/${mintResult?.hash}`}>Etherscan</a></p>
+        </Dialog>
       )}
-      {(isPrepareError || isWriteError) && (
+      {/* {(isPrepareError || isWriteError) && (
         <div>Error: {(prepareError || writeError)?.message}</div>
-      )}
+      )} */}
     </>
   )
 }

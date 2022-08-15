@@ -10,7 +10,8 @@
     },
     
     "nft": {
-        "freeMint": "Free Mint"
+        "freeMint": "Free Mint",
+        "minting": "Minting..."
     },
 
     "hero": {
