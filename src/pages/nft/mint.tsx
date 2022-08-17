@@ -72,7 +72,7 @@ function mint(props: { address: any; contract: any; claim: any; }) {
           <div className={`input-number-handler text-[24px] ml-[10px]${ numToMint >= freeMintNum ? ' disabled' : ''}`} onClick={increaseNumToMint}>+</div>
         </div>
         <div className="nft-mint-btn flex ml-[24px]">
-          { !allowedToMint && (<button className="btn btn-accent mr-[24px]" style={{ backgroundColor: 'gray'}}>{t('nft.freeMint')}</button>) }
+          { !allowedToMint && (<button className="btn btn-accent h-[45px] mr-[24px]" style={{ backgroundColor: 'gray'}}>{t('nft.freeMint')}</button>) }
           { allowedToMint && (<MintBtn index={claim?.index} maxMintNum={maxMintNum} numToMint={numToMint} proof={proof} contract={contract} />) }
         </div>
       </div>
