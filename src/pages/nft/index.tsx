@@ -18,7 +18,7 @@ function NFT() {
 
   return (
     <div className="nft bg-[#0052FF] pt-[62px] flex flex-row" id="nft">
-      <div className="nft-intro w-[50%]">
+      <div className="nft-intro">
         <div className="nft-img-row flex flex-row">
           <img className="nft-img" src="/nft/01.jpg" />
           <img className="nft-img" src="/nft/02.jpg" />
@@ -33,7 +33,7 @@ function NFT() {
           <img className="nft-img" src="/nft/03.jpg" />
         </div>
       </div>
-      <div className="nft-mint w-[50%] flex flex-col">
+      <div className="nft-mint flex flex-col">
         <div className="nft-mint-main flex flex-col flex-[1] flex-center">
           <div className="nft-mint-title">WAMO NFT MINT</div>
           <div className="nft-mint-contract flex flex-row">
@@ -49,7 +49,7 @@ function NFT() {
         <div className="nft-mint-rule bg-[#050505] color-[#FFF] py-[2vw] pl-[4vw]">
           <div className="nft-mint-rule-title mb-[1rem] text-[20px] font-bold">{t('nft.rule')}</div>
           <div>{t('nft.rule_content_1')}</div>
-          <div className="mt-[16px]">{t('nft.rule_content_2')}: </div>
+          <div className="mt-[16px]">{t('nft.rule_content_2')}</div>
           <ul className="my-[0]">
             <li>{t('nft.rule_content_3')}</li>
             <li>{t('nft.rule_content_4')}</li>

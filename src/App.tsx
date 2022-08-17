@@ -72,7 +72,7 @@ function App() {
     })
   }
   return (
-    <div className="App bg-[#fff]">
+    <div className={`${isMobile() ? 'mobile-device' : 'desktop-device'} App bg-[#fff]`}>
       <div className="text-[#FFF] w-full pc_header">
         {!isMobile() && <img src="/wamo_hero_bg.png" className="hero-bg" />}
 
