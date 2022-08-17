@@ -41,7 +41,7 @@ function MintBtn(props: { index: any; numToMint: any; maxMintNum: any; proof: an
 
   return (
     <>
-      <button className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: mintBtnDisabled ? 'gray' : ''}} onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>
+      <button disabled={mintBtnDisabled} className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: mintBtnDisabled ? 'gray' : ''}} onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>
         {isLoading ? t('nft.minting') : t('nft.freeMint')}
       </button>
       {isSuccess && (
