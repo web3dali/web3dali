@@ -2,11 +2,12 @@ import { useTranslation } from 'react-i18next'
 import Mint from './mint';
 import PreMint from './pre-mint';
 import './index.css'
-import merkle from './merkle.json'
 import { contract, etherscanHost } from './config';
 import { useAccount } from 'wagmi'
+import { useEffect, useState } from 'react';
+import { fetchJson } from 'ethers/lib/utils';
 
-const NFT_CLAIMS:{ [key: string]: { index: number, amount: string, proof: string[]} } = merkle.claims;
+let cachedMerkleData: any = null;
 
 function NFT() {
   const contractAddress = contract.addressOrName;
@@ -14,8 +15,31 @@ function NFT() {
   const maxSupply = 3706;
   const { t } = useTranslation();
   const { isConnected, address } = useAccount();
+  const [ claim, setClaim ] = useState({});
   console.debug(`isConnected: ${isConnected} ${address}`);
-
+  useEffect(() => {
+    if (isConnected && address) {
+      if (!cachedMerkleData) {
+        console.debug(`fetch merkle proof from backend`);
+        fetchJson({
+          url: `/merkle.json?t=${+new Date()}`,
+        }, undefined, (result, response) => {
+          console.debug(`fetch merkle proof result: `, result, response);
+          if (result && result.claims) {
+            cachedMerkleData = result;
+            console.debug(`query ${address} proof: `, result.claims[address]);
+            setClaim(result.claims[address]);
+          }
+        });
+      } else {
+        console.debug(`query ${address} proof from local cache: `, cachedMerkleData.claims[address]);
+        setClaim(cachedMerkleData.claims[address]);
+      }
+    }
+    return () => {
+      console.log('clear effct');
+    };
+  }, [isConnected, address])
   return (
     <div className="nft bg-[#0052FF] pt-[62px] flex flex-row" id="nft">
       <div className="nft-intro">
@@ -41,7 +65,7 @@ function NFT() {
             <div className="nft-contract-address">{t('nft.contract_address')}: <a href={`${etherscanHost}/address/${contractAddress}`} target="blank" title={contractAddress}>{shortContractAddress}</a></div>
           </div>
           { isConnected && (
-              <Mint address={address} contract={contract} claim={NFT_CLAIMS[address as string] || {}} />
+              <Mint address={address} contract={contract} claim={claim} />
             ) 
           }
           { !isConnected && (<PreMint contract={contract} />) }
