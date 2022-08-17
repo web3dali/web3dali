@@ -12,14 +12,20 @@
     },
     
     "nft": {
+        "available": "剩余数量",
+        "price": "价格",
+        "asset": "已拥有",
+        "free_mint": "可免费获得",
         "freeMint": "Free Mint",
         "minting": "Minting...",
-        "rule": "Rule",
-        "rule_content_1": "Total supply: 3,706 well-designed WAMO NFTS",
-        "rule_content_2": "ELIGIBILITY CRITERIA",
-        "rule_content_3": "Dali Web3 Summer Fest builder",
-        "rule_content_4": "Ticket holder",
-        "rule_content_5": "Dali Web3 Summer Fest sponsor"
+        "rule": "规则",
+        "total_supply": "总供应量",
+        "contract_address": "合约地址",
+        "rule_content_1": "总共 3706 只 精心设计的 WAMO NFT",
+        "rule_content_2": "满足以下任何条件的成员都可以获得 Free WAMO NFT 奖励：",
+        "rule_content_3": "参与大理Web3街会的建设",
+        "rule_content_4": "购买大理Web3街会的门票",
+        "rule_content_5": "赞助大理Web3街会"
     },
 
     "hero": {

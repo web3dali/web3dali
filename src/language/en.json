@@ -12,9 +12,15 @@
     },
         
     "nft": {
+        "available": "Available",
+        "price": "Price",
+        "asset": "Asset",
+        "free_mint": "Free Mint",
         "freeMint": "Free Mint",
         "minting": "Minting...",
         "rule": "Rule",
+        "total_supply": "Total Supply",
+        "contract_address": "Contract Address",
         "rule_content_1": "Total supply: 3,706 well-designed WAMO NFTS",
         "rule_content_2": "ELIGIBILITY CRITERIA",
         "rule_content_3": "Dali Web3 Summer Fest builder",

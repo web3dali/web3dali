@@ -21,7 +21,7 @@ function preMint(props: { contract: any; }) {
     <>
       <MintInfo availableNum={availableNum} freeMintNum={0} balance={0} />
       <div className="nft-mint-btn pre-mint-btn flex">
-        <button disabled={true} className="btn mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button>
+        {/* <button disabled={true} className="btn mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button> */}
         <ConnectBtn label={t('header.connect')} />
       </div>
     </>
