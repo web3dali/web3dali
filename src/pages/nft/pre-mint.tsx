@@ -1,4 +1,5 @@
 import ConnectBtn from '../../ConnectBtn';
+import MintInfo from './mint-info';
 import { useTranslation, Trans } from 'react-i18next'
 import { useContractReads } from 'wagmi'
 
@@ -15,27 +16,11 @@ function preMint(props: { contract: any; }) {
       functionName: 'totalSupply',
     }],
   });
+  const availableNum = data?.[0] ? ((data?.[0] as unknown as number) - (data?.[1] as unknown as number)) : 3706;
   return (
     <>
-      <div className="nft-mint-info flex flex-row w-[70%] flex-between mt-[40px]">
-        <div>
-          <div className="mb-[30px]">Price</div>
-          <div><strong className="text-[36px] vertical-mid">0</strong><em className="font-[black] ml-[15px] vertical-mid">ETH</em></div>
-        </div>
-        <div>
-          <div className="mb-[30px]">Available</div>
-          <div><strong className="text-[36px]">{ data?.[0] ? ((data?.[0] as unknown as number) - (data?.[1] as unknown as number)) : 3706 }</strong></div>
-        </div>
-        <div>
-          <div className="mb-[30px]">Free Mint</div>
-          <div><strong className="text-[36px]">0</strong></div>
-        </div>
-        <div>
-          <div className="mb-[30px]">Asset</div>
-          <div><strong className="text-[36px]">0</strong></div>
-        </div>
-      </div>
-      <div className="nft-mint-btn pre-mint-btn flex mt-[16px]">
+      <MintInfo availableNum={availableNum} freeMintNum={0} balance={0} />
+      <div className="nft-mint-btn pre-mint-btn flex">
         <button disabled={true} className="btn mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button>
         <ConnectBtn label={t('header.connect')} />
       </div>

@@ -9,12 +9,17 @@
         "connect": "Connect Wallet",
         "sponsor": "Sponsor",
         "media":"Media"
-
     },
         
     "nft": {
         "freeMint": "Free Mint",
-        "minting": "Minting..."
+        "minting": "Minting...",
+        "rule": "Rule",
+        "rule_content_1": "Total supply: 3,706 well-designed WAMO NFTS",
+        "rule_content_2": "ELIGIBILITY CRITERIA",
+        "rule_content_3": "Dali Web3 Summer Fest builder",
+        "rule_content_4": "Ticket holder",
+        "rule_content_5": "Dali Web3 Summer Fest sponsor"
     },
 
     "hero": {

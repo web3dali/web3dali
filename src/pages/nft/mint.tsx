@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ConnectBtn from '../../ConnectBtn';
+import MintInfo from './mint-info';
 import MintBtn from './mint-btn';
 import './index.css'
 import { useContractReads } from 'wagmi'
@@ -63,37 +64,18 @@ function mint(props: { address: any; contract: any; claim: any; }) {
 
   return (
     <>
-      <div className="nft-mint-info flex flex-row w-[70%] flex-between mt-[40px]">
-        <div>
-          <div className="mb-[30px]">Price</div>
-          <div><strong className="text-[36px] vertical-mid">0</strong><em className="font-[black] ml-[15px] vertical-mid">ETH</em></div>
+      <MintInfo availableNum={availableNum} freeMintNum={freeMintNum} balance={balance} />
+      <div className="flex flex-center pb-[16px]">
+        <div className="nft-mint-num flex items-center">
+          <div className={`input-number-handler text-[24px] mr-[10px]${ numToMint <= 1 ? ' disabled' : ''}`} onClick={decreaseNumToMint}>-</div>
+          <div className="input-number-text">{numToMint}</div>
+          <div className={`input-number-handler text-[24px] ml-[10px]${ numToMint >= freeMintNum ? ' disabled' : ''}`} onClick={increaseNumToMint}>+</div>
         </div>
-        <div>
-          <div className="mb-[30px]">Available</div>
-          <div><strong className="text-[36px]">{availableNum}</strong></div>
-        </div>
-        <div>
-          <div className="mb-[30px]">Free Mint</div>
-          <div><strong className="text-[36px]">{freeMintNum}</strong></div>
-        </div>
-        <div>
-          <div className="mb-[30px]">Asset</div>
-          <div><strong className="text-[36px]">{balance}</strong></div>
+        <div className="nft-mint-btn flex ml-[24px]">
+          { !allowedToMint && (<button className="btn btn-accent mr-[24px]" style={{ backgroundColor: 'gray'}}>{t('nft.freeMint')}</button>) }
+          { allowedToMint && (<MintBtn index={claim?.index} maxMintNum={maxMintNum} numToMint={numToMint} proof={proof} contract={contract} />) }
         </div>
       </div>
-      <div className="nft-mint-num mt-[16px] flex items-center">
-        <div className={`input-number-handler text-[24px] mr-[10px]${ numToMint <= 1 ? ' disabled' : ''}`} onClick={decreaseNumToMint}>-</div>
-        <div className="input-number-text">{numToMint}</div>
-        <div className={`input-number-handler text-[24px] ml-[10px]${ numToMint >= freeMintNum ? ' disabled' : ''}`} onClick={increaseNumToMint}>+</div>
-      </div>
-      <div className="nft-mint-btn flex mt-[16px]">
-        { !allowedToMint && (<button className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: 'gray'}}>{t('nft.freeMint')}</button>) }
-        { allowedToMint && (<MintBtn index={claim?.index} maxMintNum={maxMintNum} numToMint={numToMint} proof={proof} contract={contract} />) }
-        <ConnectBtn label={t('header.connect')} />
-      </div>
-      {/* {(isPrepareError || isWriteError) && (
-        <div>Error: {(prepareError || writeError)?.message}</div>
-      )} */}
     </>
   )
 }
