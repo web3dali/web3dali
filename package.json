@@ -16,7 +16,6 @@
     "i18next-xhr-backend": "^3.2.2",
     "lodash.merge": "^4.6.2",
     "rc-dialog": "^8.9.0",
-    "rc-input-number": "^7.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^11.18.3",

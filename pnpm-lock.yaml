@@ -13,7 +13,6 @@ specifiers:
   i18next-xhr-backend: ^3.2.2
   lodash.merge: ^4.6.2
   rc-dialog: ^8.9.0
-  rc-input-number: ^7.3.6
   react: ^18.2.0
   react-dom: ^18.2.0
   react-i18next: ^11.18.3
@@ -30,7 +29,6 @@ dependencies:
   i18next-xhr-backend: 3.2.2
   lodash.merge: 4.6.2
   rc-dialog: 8.9.0_biqbaboplfbrettd7655fr4n2y
-  rc-input-number: 7.3.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-i18next: 11.18.3_e5iznsk4khvwamygeotad7ngzi
@@ -3260,19 +3258,6 @@ packages:
       '@babel/runtime': 7.18.9
       classnames: 2.3.1
       rc-motion: 2.6.2_biqbaboplfbrettd7655fr4n2y
-      rc-util: 5.23.0_biqbaboplfbrettd7655fr4n2y
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
-  /rc-input-number/7.3.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-Se62oMOBn9HwF/gSag+YtAYyKZsjJzEsqmyAJHAnAvPfjZJOu7dLMlQRwBbTtELbKXM/Y5Fztcq8CW2Y9f49qA==}
-    peerDependencies:
-      react: '>=16.9.0'
-      react-dom: '>=16.9.0'
-    dependencies:
-      '@babel/runtime': 7.18.9
-      classnames: 2.3.1
       rc-util: 5.23.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0

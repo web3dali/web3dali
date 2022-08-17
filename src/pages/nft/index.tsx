@@ -1,39 +1,23 @@
-import { useState } from 'react'
-import { useTranslation, Trans } from 'react-i18next'
-import i18n from 'i18next'
-import ConnectBtn from '../../ConnectBtn';
-import InputNumber from 'rc-input-number';
+import { useTranslation } from 'react-i18next'
 import Mint from './mint';
 import PreMint from './pre-mint';
 import './index.css'
-import 'rc-input-number/assets/index.css'
-import abi from './abi.json';
 import merkle from './merkle.json'
-
-import { useContractReads, useAccount, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from 'wagmi'
-import { BigNumber } from 'ethers';
-import { parseEther, parseUnits } from 'ethers/lib/utils';
+import { contract, etherscanHost } from './config';
+import { useAccount } from 'wagmi'
 
 const NFT_CLAIMS:{ [key: string]: { index: number, amount: string, proof: string[]} } = merkle.claims;
 
-const etherscanHOST = 'https://rinkeby.etherscan.io';
-// const etherscanHOST = 'https://etherscan.io';
-
-const CONTRACT = {
-  addressOrName: '0x11d06a9fcfbb45037b085a5586799d35e5af7f00',
-  contractInterface: abi,
-}
-
 function NFT() {
-  const contractAddress = CONTRACT.addressOrName;
+  const contractAddress = contract.addressOrName;
   const shortContractAddress= contractAddress.slice(0, 5) + '...' + contractAddress.slice(contractAddress.length - 5, contractAddress.length - 1);
   const maxSupply = 3706;
   const { t } = useTranslation();
-  const { connector: activeConnector, isConnected, address } = useAccount();
+  const { isConnected, address } = useAccount();
   console.debug(`isConnected: ${isConnected} ${address}`);
 
   return (
-    <div className="nft bg-[#0052FF] pt-[62px] flex flex-row">
+    <div className="nft bg-[#0052FF] pt-[62px] flex flex-row" id="nft">
       <div className="nft-intro w-[50%]">
         <div className="nft-img-row flex flex-row">
           <img className="nft-img" src="/nft/01.jpg" />
@@ -54,14 +38,14 @@ function NFT() {
           <div className="nft-mint-title">WAMO NFT MINT</div>
           <div className="nft-mint-contract flex flex-row">
             <div className="nft-contract-supply mr-[54px]">Total supply: {maxSupply}</div>
-            <div className="nft-contract-address">Contract address: <a href={`${etherscanHOST}/address/${contractAddress}`} target="blank" title={contractAddress}>{shortContractAddress}</a></div>
+            <div className="nft-contract-address">Contract address: <a href={`${etherscanHost}/address/${contractAddress}`} target="blank" title={contractAddress}>{shortContractAddress}</a></div>
           </div>
           { isConnected && (
             <div>
-              <Mint address={address} contract={CONTRACT} claim={NFT_CLAIMS[address as string] || {}} />
+              <Mint address={address} contract={contract} claim={NFT_CLAIMS[address as string] || {}} />
             </div>) 
           }
-          { !isConnected && (<PreMint contract={CONTRACT} />) }
+          { !isConnected && (<PreMint contract={contract} />) }
         </div>
         <div className="nft-mint-rule bg-[#050505] color-[#FFF] h-[306px] pl-[4vw]">
           <div className="nft-mint-rule-title">Rule: </div>

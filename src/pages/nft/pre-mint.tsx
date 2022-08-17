@@ -1,7 +1,6 @@
 import ConnectBtn from '../../ConnectBtn';
-import InputNumber from 'rc-input-number';
 import { useTranslation, Trans } from 'react-i18next'
-import { useContractReads, useAccount, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from 'wagmi'
+import { useContractReads } from 'wagmi'
 
 
 function preMint(props: { contract: any; }) {
@@ -35,12 +34,6 @@ function preMint(props: { contract: any; }) {
           <div className="mb-[30px]">Asset</div>
           <div><strong className="text-[36px]">0</strong></div>
         </div>
-      </div>
-      <div className="nft-mint-num mt-[16px]">
-        <InputNumber className="nft-mint-num-input" min={0} max={0} value={0} 
-          disabled={true}
-          upHandler={<div>+</div>}
-          downHandler={<div>-</div>} />
       </div>
       <div className="nft-mint-btn pre-mint-btn flex mt-[16px]">
         <button disabled={true} className="btn mt-[-2px] mr-[24px] bg-[gray]">{t('nft.freeMint')}</button>

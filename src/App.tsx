@@ -13,18 +13,18 @@ import NFT from './pages/nft';
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import { useEffect } from 'react'
+
 const changeLanguage = () => {
   i18n.changeLanguage(i18n.language == 'en' ? 'zh' : 'en')
 }
 
 function App() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   useEffect(() => {
-    if(i18n.language == 'en'){
-      document.title="Summer of Wamo|Dali Web3 Fest"
-    }else{
-      document.title="瓦猫之夏|大理Web3街会"
-      
+    if (i18n.language == 'en') {
+      document.title = 'Summer of Wamo|Dali Web3 Fest'
+    } else {
+      document.title = '瓦猫之夏|大理Web3街会'
     }
   }, [i18n])
   const isMobile = () => {
@@ -55,80 +55,78 @@ function App() {
     }
     return mobile_flag
   }
-  useEffect(() => {}, [])
+  useEffect(() => {
+    const hrefArr: any = location.href.split('#') || []
+    console.debug(hrefArr)
+    if (hrefArr.length > 1 && hrefArr[1].length > 1) {
+      document
+        .querySelector<HTMLElement>(`#${hrefArr[1]}`)!
+        .scrollIntoView(true)
+    }
+    // document.querySelector("#header").scrollIntoView(true);
+  }, [])
+  const jump = (a: string) => {
+    document.querySelector<HTMLElement>(a)!.scrollIntoView({
+      behavior: 'smooth', // 平滑过渡
+      block: 'start' // 上边框与视窗顶部平齐。默认值
+    })
+  }
   return (
     <div className="App bg-[#fff]">
-      <div className="text-[#FFF] w-full">
-        {isMobile() ? (
-          <img src="/mobile_hero.png" className="hero-bg " />
-        ) : (
-          <img src="/wamo_hero_bg.png" className="hero-bg" />
-        )}
+      <div className="text-[#FFF] w-full pc_header">
+        {!isMobile() && <img src="/wamo_hero_bg.png" className="hero-bg" />}
 
-        <div className="header ">
-          <div className="box-container">
-            <div className="h-16 flex-between">
-              <div className="brand flex gap-4">
-                <img className="h-[40px]" src={wamo} alt="" />
-                <span className="text-[1rem]">{t('hero.summer')}</span>
-              </div>
+        <div className={isMobile() ? 'mobile-header' : 'header'}>
+          <div className="box-container box-fl">
+            <div
+              className={` ${isMobile() ? 'header_content_mobile h-36':'h-16 header_content'} `}
+            >
+              <div className='box-container flex-between h-16'>
+                <div className="brand flex gap-4">
+                  <img className="h-[40px]" src={wamo} alt="" />
+                  <span className="text-[1rem]">{t('hero.summer')}</span>
+                </div>
               {isMobile() ? (
                 <>
-                  <ConnectBtn label={t('header.connect')} />
+                  <div className="menu flex-between gap-6  text-[1.2rem]">
+                    <a href="#" onClick={changeLanguage}>
+                      中/EN
+                    </a>
+                    <ConnectBtn label={t('header.connect')} />
+                  </div>
                 </>
               ) : (
                 <div className="menu flex items-center gap-6 text-sm">
                   <a href="#" onClick={changeLanguage}>
                     中/EN
                   </a>
-                  <a href="#content">{t('header.content')}</a>
-                  <a href="#venue">{t('header.venue')}</a>
-                  <a href="#speaker">{t('header.speakers')}</a>
-
-                  <a href="#about">{t('header.about')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#nft')}>{t('header.nft')}</a>
+                  {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#about')}>{t('header.about')}</a>
                   <ConnectBtn label={t('header.connect')} />
                 </div>
               )}
             </div>
             {isMobile() && (
-              <div className="menu flex-between gap-6 pl-45 pr-34 text-[1.2rem]">
-                <a href="#" onClick={changeLanguage}>
-                  中/EN
-                </a>
-                <a href="#content">{t('header.content')}</a>
-                <a href="#venue">{t('header.venue')}</a>
-                <a href="#speaker">{t('header.speakers')}</a>
-                <a href="#about">{t('header.about')}</a>
+              <div className="menu flex-between gap-6 pl-45 pr-34 text-[1.2rem] mt-6">
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#nft')}>{t('header.nft')}</a>
+                  {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#about')}>{t('header.about')}</a>
               </div>
-            )}
+            )}</div>
             <Hero />
           </div>
         </div>
-
-        {/* <div className="header">
-          <div className="box-container">
-            <div className="h-16 flex-between">
-              <div className="brand flex gap-4">
-                <img className="h-[40px]" src={wamo} alt="" />
-                <span className="text-[1rem]">{t('hero.summer')}</span>
-              </div>
-              <div className="menu flex items-center gap-6 text-sm">
-                <a href="#" onClick={changeLanguage}>
-                  中/EN
-                </a>
-                <a href="#content">{t('header.content')}</a>
-                <a href="#venue">{t('header.venue')}</a>
-                <a href="#speaker">{t('header.speakers')}</a> */}
-        {/* <a href="#">{t('header.nft')}</a> */}
-        {/* <a href="#">{t('header.sbt')}</a> */}
-        {/* <a href="#about">{t('header.about')}</a>
-                <ConnectBtn label={t('header.connect')} />
-              </div>
-            </div>
-            <Hero />
-          </div>
-        </div> */}
       </div>
+
       <div className="bg-[#6ce4D1] py-32 relative">
         <div className="box-container blockquote relative">
           <div className="text-white text-2xl max-w-[988px] mx-auto px-[64px]">

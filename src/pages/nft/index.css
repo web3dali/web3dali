@@ -36,26 +36,31 @@
   padding: 24px;
 }
 
-.nft-mint-num-input.rc-input-number {
-  height: 58px;
+.nft-mint-num .input-number-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 58px;
+  padding: 7px 37px;
+  color: #000;
+  background: #F6F6F6;
+  border-radius: 10px;
+  margin: 0 20px;
 }
 
-.nft-mint-num-input .rc-input-number-input {
+
+.nft-mint-num .input-number-handler {
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 44px;
-  color: #000;
-  background: #F6F6F6;
+  color: #000000;
+  cursor: pointer;
 }
 
-.nft-mint-num-input .rc-input-number-handler-wrap {
-  width: 30px;
-}
-
-.nft-mint-num-input .rc-input-number-handler {
-  height: 28px;
-  font-size: 24px;
-  line-height: 28px;
+.nft-mint-num .input-number-handler.disabled {
+  color: #D9D9D9;
+  cursor: not-allowed;
 }
 
 .nft-mint-btn .connect-btn {

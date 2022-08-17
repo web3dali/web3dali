@@ -1,19 +1,10 @@
 import { useState } from 'react'
-import { useTranslation, Trans } from 'react-i18next'
-import i18n from 'i18next'
+import { useTranslation } from 'react-i18next'
 import ConnectBtn from '../../ConnectBtn';
-import InputNumber from 'rc-input-number';
-import Dialog from 'rc-dialog';
+import MintBtn from './mint-btn';
 import './index.css'
-import 'rc-input-number/assets/index.css'
-import 'rc-dialog/assets/index.css'
-
-import { useContractReads, useAccount, usePrepareContractWrite, useContractWrite, useWaitForTransaction } from 'wagmi'
+import { useContractReads } from 'wagmi'
 import { BigNumber } from 'ethers';
-import { parseEther, parseUnits } from 'ethers/lib/utils';
-import React from 'react';
-
-const etherscanHOST = 'https://rinkeby.etherscan.io';
 
 function mint(props: { address: any; contract: any; claim: any; }) {
   const { t } = useTranslation();
@@ -35,6 +26,12 @@ function mint(props: { address: any; contract: any; claim: any; }) {
         args: [address]
       },
     ],
+    onSuccess: (data) => {
+      const maxMintNum = parseInt(claim?.amount as string) || 0;
+      const numMinted = data?.[2] ? (data[2] as unknown as BigNumber).toNumber() : 0;
+      const freeMintNum = maxMintNum - numMinted;
+      setNumToMint(freeMintNum);
+    }
   });
   console.debug('useContractReads', { data, isError });
   const maxSupply = 3706;
@@ -48,37 +45,21 @@ function mint(props: { address: any; contract: any; claim: any; }) {
   console.debug('nft info', { totalSupply, availableNum, balance, numMinted, freeMintNum, numToMint });
 
   const proof = claim?.proof || [];
-  const { config, error: prepareError, isError: isPrepareError } = usePrepareContractWrite({
-     ...contract,
-     contractInterface: [{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"},{"internalType":"uint256","name":"thisTimeMint","type":"uint256"},{"internalType":"uint256","name":"maxMint","type":"uint256"},{"internalType":"bytes32[]","name":"merkleProof","type":"bytes32[]"}],"name":"preSalesMint","outputs":[],"stateMutability":"payable","type":"function"}],
-    functionName: 'preSalesMint',
-    // args: [2, 1, 4, [
-    //   "0x077f5c2952cefcf8422894d9e753e4100922b06a18690ecf81cb7c29cd3bc3f7",
-    //   "0x583953903f803b7901f33abb9b923a1164f61e16646947627447e1bc45762499"
-    // ] ],
-    args: [claim?.index, numToMint, maxMintNum, proof],
-    overrides: {
-      value: parseUnits('1', 0),
-      // gasLimit: parseEther('0.01'),
-    }
-  })
-
-  console.debug('usePrepareContractWrite', { config, prepareError });
+  const allowedToMint = freeMintNum > 0 && numToMint > 0;
   
-  const { data: mintResult, write: freeMint, isError: isWriteError, error: writeError } = useContractWrite(config)
+  function increaseNumToMint() {
+    if (numToMint >= freeMintNum) {
+      return;
+    }
+    setNumToMint(numToMint+1);
+  }
 
-  console.debug('useContractWrite', { freeMint });
-
-  let { isLoading, isSuccess } = useWaitForTransaction({
-    hash: mintResult?.hash,
-  });
-
-  // isLoading = true;
-  // isSuccess = true;
-
-  const [dialogVisible, setDialogVisible] = React.useState(true);
-
-  const mintBtnDisabled = !freeMint || numToMint <= 0 || isLoading;
+  function decreaseNumToMint() {
+    if (numToMint <= 1) {
+      return;
+    }
+    setNumToMint(numToMint-1);
+  }
 
   return (
     <>
@@ -100,22 +81,16 @@ function mint(props: { address: any; contract: any; claim: any; }) {
           <div><strong className="text-[36px]">{balance}</strong></div>
         </div>
       </div>
-      <div className="nft-mint-num mt-[16px]">
-        <InputNumber className="nft-mint-num-input" min={0} max={freeMintNum} value={numToMint} 
-          onChange={(value) => { setNumToMint(value) }}
-          upHandler={<div>+</div>}
-          downHandler={<div>-</div>} />
+      <div className="nft-mint-num mt-[16px] flex items-center">
+        <div className={`input-number-handler text-[24px] mr-[10px]${ numToMint <= 1 ? ' disabled' : ''}`} onClick={decreaseNumToMint}>-</div>
+        <div className="input-number-text">{numToMint}</div>
+        <div className={`input-number-handler text-[24px] ml-[10px]${ numToMint >= freeMintNum ? ' disabled' : ''}`} onClick={increaseNumToMint}>+</div>
       </div>
       <div className="nft-mint-btn flex mt-[16px]">
-        <button disabled={mintBtnDisabled} className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: mintBtnDisabled ? 'gray' : ''}} onClick={() => { console.debug('freeMint Clicked'); freeMint?.() }}>{isLoading ? t('nft.minting') : t('nft.freeMint')}</button>
+        { !allowedToMint && (<button className="btn btn-accent mt-[-2px] mr-[24px]" style={{ backgroundColor: 'gray'}}>{t('nft.freeMint')}</button>) }
+        { allowedToMint && (<MintBtn index={claim?.index} maxMintNum={maxMintNum} numToMint={numToMint} proof={proof} contract={contract} />) }
         <ConnectBtn label={t('header.connect')} />
       </div>
-      {isSuccess && (
-        <Dialog title={"WAMO NFT MINT"} visible={dialogVisible} className="w-"
-          footer={(<div className="btn btn-secondary text-center color-[white]" key="ok" onClick={() => { setDialogVisible(false)}}>OK</div>)}>
-          <p>Successfully minted! Check it on <a href={`${etherscanHOST}/tx/${mintResult?.hash}`}>Etherscan</a></p>
-        </Dialog>
-      )}
       {/* {(isPrepareError || isWriteError) && (
         <div>Error: {(prepareError || writeError)?.message}</div>
       )} */}
