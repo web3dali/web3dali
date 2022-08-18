@@ -16,11 +16,12 @@ function MintBtn(props: {
   numToMint: any
   maxMintNum: any
   proof: any
-  contract: any
+  contract: any,
+  onSuccess: Function | undefined
 }) {
   const { t } = useTranslation()
-  const { index, numToMint, maxMintNum, proof, contract } = props
-  const args = [index, 1, maxMintNum, proof]
+  const { index, numToMint, maxMintNum, proof, contract, onSuccess } = props
+  const args = [index, numToMint, maxMintNum, proof]
   console.debug('preSalesMint args: ', args)
 
   const {
@@ -58,14 +59,18 @@ function MintBtn(props: {
   })
 
   let { isLoading, isSuccess } = useWaitForTransaction({
-    hash: mintResult?.hash
+    hash: mintResult?.hash,
+    onSuccess: () => {
+      console.debug('useWaitForTransaction onSuccess');
+      onSuccess?.();
+    }
   })
 
   // isLoading = true;
   // isSuccess = true;
 
   const [dialogVisible, setDialogVisible] = useState(true)
-  const mintBtnDisabled = !freeMint || isLoading
+  const mintBtnDisabled = !freeMint || isLoading;
 
   return (
     <>

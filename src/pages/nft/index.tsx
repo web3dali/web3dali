@@ -39,7 +39,13 @@ function NFT() {
     return () => {
       console.log('clear effct');
     };
-  }, [isConnected, address])
+  }, [address])
+
+  const [ mintTimes, setMintTimes ] = useState(0);
+  const onSuccessMint = () => {
+    // setMintTimes(mintTimes + 1);
+  }
+
   return (
     <div className="nft bg-[#0052FF] pt-[62px] flex flex-row" id="nft">
       <div className="nft-intro">
@@ -65,7 +71,7 @@ function NFT() {
             <div className="nft-contract-address">{t('nft.contract_address')}: <a href={`${etherscanHost}/address/${contractAddress}`} target="blank" title={contractAddress}>{shortContractAddress}</a></div>
           </div>
           { isConnected && (
-              <Mint address={address} contract={contract} claim={claim} />
+              <Mint key={mintTimes} address={address} contract={contract} claim={claim} onSuccess={onSuccessMint} />
             ) 
           }
           { !isConnected && (<PreMint contract={contract} />) }
