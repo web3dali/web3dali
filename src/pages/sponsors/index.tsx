@@ -402,9 +402,9 @@ export const About = () => {
             <div
               className="sponsors-img"
               style={{cursor:'pointer'}}
-              onClick={() => openSponsors('http://hotpot.network')}
+              onClick={() => openSponsors('https://www.metaelfland.com')}
             >
-              <img src="/l1.png" alt="" />
+              <img src="/n1.png" alt="" />
             </div>
             <div
               className="sponsors-img"
@@ -416,9 +416,9 @@ export const About = () => {
             <div
               className="sponsors-img"
               style={{cursor:'pointer'}}
-              onClick={() => openSponsors('https://www.realapp.xyz/')}
+              onClick={() => openSponsors('https://outsad.io/#/')}
             >
-              <img src="/l8.png" alt="" />
+              <img src="/OutSad.png" alt="" />
             </div>
           </div>
           <div className="flex-between mt-15">
@@ -432,27 +432,38 @@ export const About = () => {
             <div
               className="sponsors-img"
               style={{cursor:'pointer'}}
+              onClick={() => openSponsors('https://www.zhejianglab.com/')}
+            >
+              <img src="/l2.png" alt="" />
+            </div>
+            <div
+              className="sponsors-img"
+            >
+            </div> 
+            {/* <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
               onClick={() => openSponsors('https://www.zecrey.com/')}
             >
               <img src="/l6.png" alt="" />
-            </div>
-            <div
+            </div> */}
+            {/* <div
               className="sponsors-img"
               style={{cursor:'pointer'}}
               onClick={() => openSponsors('https://www.kava.io/')}
             >
               <img src="/l3.png" alt="" />
-            </div>
+            </div> */}
           </div>
-          <div className="flex-between mt-20">
-            <div
+          {/* <div className="flex-between mt-20"> */}
+            {/* <div
               className="sponsors-img"
               style={{cursor:'pointer'}}
               onClick={() => openSponsors('https://starcoin.org')}
             >
               <img src="/l7.png" alt="" />
-            </div>
-            <div
+            </div> */}
+            {/* <div
               className="sponsors-img"
               style={{cursor:'pointer'}}
               onClick={() => openSponsors('https://www.zhejianglab.com/')}
@@ -460,7 +471,7 @@ export const About = () => {
               <img src="/l2.png" alt="" />
             </div>
             <div className="sponsors-img-empty"></div>
-          </div>
+          </div> */}
 
           <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-45">
             {t('sponsors.title3')}
@@ -476,7 +487,13 @@ export const About = () => {
             >
               <img src="/z2.png" alt="" />
             </div>
-            <div className="sponsors-img-empty"></div>
+            <div
+              className="sponsors-img"
+              style={{cursor:'pointer'}}
+              onClick={() => openSponsors('http://www.dearboyfriend.cn/')}
+            >
+              <img src="/n2.png" alt="" />
+            </div>
           </div>
           <div id="media" className="pt-45"></div>
           <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] ">
