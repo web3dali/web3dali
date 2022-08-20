@@ -245,39 +245,39 @@ function Content() {
                       {t('content.camp4_desc_2')}
                     </figure>
                   </fieldset>
-                  <div className="content-image mt-15">
+                  <div className="content-image-mobile mt-15">
                     <img src="/content_img_05.png" alt="" />
                   </div>
                 </div>
                 <div className="text-[#2f2f2f]">
-                  <div className="content-image">
+                  <div className="content-image-mobile">
                     <img src="/content_img_04.png" alt="" />
                   </div>
                 </div>
                 <div className="text-[#2f2f2f]">
-                  <div className="content-image">
+                  <div className="content-image-mobile">
                     <img src="/content_img_09.jpeg" alt="" />
                   </div>
                 </div>
                 <div className="text-[#2f2f2f]">
-                  <div className="content-image">
+                  <div className="content-image-mobile">
                     <img src="/content_img_08.jpeg" alt="" />
                   </div>
                 </div>
                 <div className="text-[#2f2f2f]">
-                  <div className="content-image">
+                  <div className="content-image-mobile">
                     <img src="/content_img_10.jpeg" alt="" />
                   </div>
                 </div>
                 <div className="text-[#2f2f2f]">
                   
-                  <div className="content-image">
+                  <div className="content-image-mobile">
                     <img src="/content_img_13.jpeg" alt="" />
                   </div>
                 </div>
                 <div className="text-[#2f2f2f]">
                   
-                  <div className="content-image">
+                  <div className="content-image-mobile">
                     <img src="/content_img_06.png" alt="" />
                   </div>
                 </div>
