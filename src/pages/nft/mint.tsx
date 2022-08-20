@@ -7,9 +7,9 @@ import './index.css'
 import { useContractReads } from 'wagmi'
 import { BigNumber } from 'ethers';
 
-function mint(props: { address: any; contract: any; claim: any; onSuccess: any }) {
+function mint(props: { address: any; contract: any; claim: any; }) {
   const { t } = useTranslation();
-  const { address, contract, claim, onSuccess } = props;
+  const { address, contract, claim } = props;
   const { data, isError } = useContractReads({
     contracts: [
       {
@@ -68,7 +68,6 @@ function mint(props: { address: any; contract: any; claim: any; onSuccess: any }
     balance = balance + numToMint;
     console.debug('onSuccess outside, reset freeMintNum, balance and numToMint', { freeMintNum, balance });
     setNumToMint(freeMintNum);
-    onSuccess?.();
   }
 
   return (
