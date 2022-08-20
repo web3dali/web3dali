@@ -1,0 +1,180 @@
+.nft {
+  margin-bottom: -53px;
+  color: #000;
+}
+
+.nft-mint {
+  border-radius: 74px 0 0 74px;
+  background: #FFFFFF;
+  box-shadow: -10px 30px 18px rgba(0, 0, 0, 0.12);
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.nft-intro {
+  padding-right: 5.5vw;
+}
+
+.nft-intro, .nft-mint {
+  width: 50%;
+}
+
+.nft-img-row {
+  align-items: center;
+  justify-content: center;
+}
+
+.nft-img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 4vw;
+  padding: 0 0.7vw;
+}
+
+.nft-mint-title {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.nft-mint-info {
+  background: #F5F5F5;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.nft-mint-info strong {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.nft-mint-info .info-val {
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.nft-mint-num .input-number-text {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 58px;
+  padding: 7px 37px;
+  color: #000;
+  background: #F6F6F6;
+  border-radius: 10px;
+  margin: 0 20px;
+}
+
+
+.nft-mint-num .input-number-handler {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.nft-mint-num .input-number-handler.disabled {
+  color: #D9D9D9;
+  cursor: not-allowed;
+}
+
+.nft-mint-btn .connect-btn {
+  transform: scale(1.15);
+  transform-origin: center;
+}
+
+/* .nft-mint-btn [data-rk] .ju367v7i {
+  padding-right: 2rem;
+}
+
+.nft-mint-btn [data-rk] .ju367v6x {
+  padding-left: 2rem;
+} */
+
+.nft-mint-btn button {
+  font-size: 1rem;
+  border-width: 0;
+}
+
+.nft-mint-btn button:hover {
+  cursor: pointer;
+  transform: scale(1.025);
+  transition: 0.125s ease;
+}
+
+.nft-mint-btn .btn {
+  padding: 0 6rem;
+}
+
+.pre-mint-btn button {
+  color: white !important;
+  padding: 0 6rem !important;
+}
+
+.nft-mint-rule {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+@media (max-width: 1280px) {
+  .nft-mint-title {
+    font-size: 40px;
+  }
+
+  .nft-mint-info {
+    margin-top: 2vw !important;
+    margin-bottom: 2vw !important;
+  }
+}
+
+.mobile-device .nft {
+  flex-direction: column !important;
+}
+
+.mobile-device .nft-intro {
+  width: 100%;
+  padding-right: 0;
+  margin-bottom: 5vw;
+}
+
+.mobile-device .nft-img {
+  width: 25vw;
+  height: 25vw;
+}
+
+.mobile-device .nft-mint {
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 74px;
+}
+
+.mobile-device .nft-mint-main {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.mobile-device .nft-mint-rule {
+  padding-bottom: 5vw;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.mobile-device .nft-mint-btn .connect-btn {
+  transform: scale(2.5);
+}
+
+.mobile-device .nft-mint-rule .nft-mint-rule-title {
+  font-size: 36px;
+}
+
+.mobile-device .nft-mint-info {
+  margin-bottom: 5vw !important;
+}

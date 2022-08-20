@@ -9,22 +9,17 @@ import '@rainbow-me/rainbowkit/styles.css';
 import merge from 'lodash.merge';
 import { getDefaultWallets, RainbowKitProvider, lightTheme, Theme } from '@rainbow-me/rainbowkit';
 import { chain, configureChains, createClient, WagmiConfig } from 'wagmi';
-import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
+import { alchemyProvider } from 'wagmi/providers/alchemy'
+import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, provider } = configureChains(
-  // [chain.goerli], // you can add more chains here like chain.mainnet, chain.optimism etc.
+  // [chain.rinkeby], // you can add more chains here like chain.mainnet, chain.optimism etc.
   [chain.mainnet],
   [
-    jsonRpcProvider({
-      rpc: () => {
-        return {
-          // http: 'https://rpc.ankr.com/eth_goerli', // go to https://www.ankr.com/protocol/ to get a free RPC for your network
-          http: 'https://rpc.ankr.com/eth',
-        };
-      },
-    }),
-    publicProvider(),
+    alchemyProvider({ apiKey: '1YkQCuJSPjl5LU4mV_9dS_6P-sIzjDHR', priority: 0 }),
+    infuraProvider({ apiKey: '15846464788c4374b845160a4c9457bd', priority: 1 }),
+    publicProvider({ priority: 2 }),
   ]
 );
 
@@ -34,7 +29,7 @@ const { connectors } = getDefaultWallets({
 });
 
 const wagmiClient = createClient({
-  autoConnect: false,
+  autoConnect: true,
   connectors,
   provider,
 });

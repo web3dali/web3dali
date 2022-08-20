@@ -8,7 +8,8 @@ import Speaker from './Speaker'
 import Venue from './Venue'
 import wamo from './assets/wamo.svg'
 import Content from './Content'
-import Sponsors from './pages/sponsors'
+import Sponsors from './pages/sponsors';
+import NFT from './pages/nft';
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import { useEffect } from 'react'
@@ -56,7 +57,7 @@ function App() {
   }
   useEffect(() => {
     const hrefArr: any = location.href.split('#') || []
-    console.log(hrefArr)
+    console.debug(hrefArr)
     if (hrefArr.length > 1 && hrefArr[1].length > 1) {
       document
         .querySelector<HTMLElement>(`#${hrefArr[1]}`)!
@@ -71,7 +72,7 @@ function App() {
     })
   }
   return (
-    <div className="App bg-[#fff]">
+    <div className={`${isMobile() ? 'mobile-device' : 'desktop-device'} App bg-[#fff]`}>
       <div className="text-[#FFF] w-full pc_header">
         {!isMobile() && <img src="/wamo_hero_bg.png" className="hero-bg" />}
 
@@ -101,6 +102,7 @@ function App() {
                   </a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#nft')}>{t('header.nft')}</a>
                   {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
                   <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
@@ -113,6 +115,7 @@ function App() {
               <div className="menu flex-between gap-6 pl-45 pr-34 text-[1.2rem] mt-6">
                   <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
+                  <a style={{cursor:'pointer'}} onClick={() => jump('#nft')}>{t('header.nft')}</a>
                   {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
                   <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
                   <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
@@ -140,6 +143,7 @@ function App() {
         <Venue />
         {/* <Speaker /> */}
       </div>
+      <NFT />
       <About />
       <Sponsors />
       {/* <!-- Footer --> */}
