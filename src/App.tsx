@@ -8,8 +8,8 @@ import Speaker from './Speaker'
 import Venue from './Venue'
 import wamo from './assets/wamo.svg'
 import Content from './Content'
-import Sponsors from './pages/sponsors';
-import NFT from './pages/nft';
+import Sponsors from './pages/sponsors'
+import NFT from './pages/nft'
 import { useTranslation, Trans } from 'react-i18next'
 import i18n from 'i18next'
 import { useEffect } from 'react'
@@ -59,9 +59,13 @@ function App() {
     const hrefArr: any = location.href.split('#') || []
     console.debug(hrefArr)
     if (hrefArr.length > 1 && hrefArr[1].length > 1) {
-      document
-        .querySelector<HTMLElement>(`#${hrefArr[1]}`)!
-        .scrollIntoView(true)
+      setTimeout(() => {
+        jump(`#${hrefArr[1]}`)
+      }, 1000)
+
+      // document
+      //   .querySelector<HTMLElement>(`#${hrefArr[1]}`)!
+      //   .scrollIntoView(true)
     }
     // document.querySelector("#header").scrollIntoView(true);
   }, [])
@@ -72,56 +76,122 @@ function App() {
     })
   }
   return (
-    <div className={`${isMobile() ? 'mobile-device' : 'desktop-device'} App bg-[#fff]`}>
+    <div
+      className={`${
+        isMobile() ? 'mobile-device' : 'desktop-device'
+      } App bg-[#fff]`}
+    >
       <div className="text-[#FFF] w-full pc_header">
         {!isMobile() && <img src="/wamo_hero_bg.png" className="hero-bg" />}
 
         <div className={isMobile() ? 'mobile-header' : 'header'}>
           <div className="box-container box-fl">
             <div
-              className={` ${isMobile() ? 'header_content_mobile h-36':'h-16 header_content'} `}
+              className={` ${
+                isMobile()
+                  ? 'header_content_mobile h-36'
+                  : 'h-16 header_content'
+              } `}
             >
-              <div className='box-container flex-between h-16'>
+              <div className="box-container flex-between h-16">
                 <div className="brand flex gap-4">
                   <img className="h-[40px]" src={wamo} alt="" />
                   <span className="text-[1rem]">{t('hero.summer')}</span>
                 </div>
-              {isMobile() ? (
-                <>
-                  <div className="menu flex-between gap-6  text-[1.2rem]">
+                {isMobile() ? (
+                  <>
+                    <div className="menu flex-between gap-6  text-[1.2rem]">
+                      <a href="#" onClick={changeLanguage}>
+                        中/EN
+                      </a>
+                      <ConnectBtn label={t('header.connect')} />
+                    </div>
+                  </>
+                ) : (
+                  <div className="menu flex items-center gap-6 text-sm">
                     <a href="#" onClick={changeLanguage}>
                       中/EN
                     </a>
+                    <a
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => jump('#content')}
+                    >
+                      {t('header.content')}
+                    </a>
+                    <a
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => jump('#venue')}
+                    >
+                      {t('header.venue')}
+                    </a>
+                    <a
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => jump('#nft')}
+                    >
+                      {t('header.nft')}
+                    </a>
+                    {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
+                    <a
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => jump('#sponsor')}
+                    >
+                      {t('header.sponsor')}
+                    </a>
+                    <a
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => jump('#media')}
+                    >
+                      {t('header.media')}
+                    </a>
+                    <a
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => jump('#about')}
+                    >
+                      {t('header.about')}
+                    </a>
                     <ConnectBtn label={t('header.connect')} />
                   </div>
-                </>
-              ) : (
-                <div className="menu flex items-center gap-6 text-sm">
-                  <a href="#" onClick={changeLanguage}>
-                    中/EN
+                )}
+              </div>
+              {isMobile() && (
+                <div className="menu flex-between gap-6 pl-45 pr-34 text-[1.2rem] mt-6">
+                  <a
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => jump('#content')}
+                  >
+                    {t('header.content')}
                   </a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#nft')}>{t('header.nft')}</a>
+                  <a
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => jump('#venue')}
+                  >
+                    {t('header.venue')}
+                  </a>
+                  <a style={{ cursor: 'pointer' }} onClick={() => jump('#nft')}>
+                    {t('header.nft')}
+                  </a>
                   {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#about')}>{t('header.about')}</a>
-                  <ConnectBtn label={t('header.connect')} />
+                  <a
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => jump('#sponsor')}
+                  >
+                    {t('header.sponsor')}
+                  </a>
+                  <a
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => jump('#media')}
+                  >
+                    {t('header.media')}
+                  </a>
+                  <a
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => jump('#about')}
+                  >
+                    {t('header.about')}
+                  </a>
                 </div>
               )}
             </div>
-            {isMobile() && (
-              <div className="menu flex-between gap-6 pl-45 pr-34 text-[1.2rem] mt-6">
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#content')}>{t('header.content')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#venue')}>{t('header.venue')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#nft')}>{t('header.nft')}</a>
-                  {/* <a style={{cursor:'pointer'}} onClick={() => jump('#speaker')}>{t('header.speakers')}</a> */}
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#sponsor')}>{t('header.sponsor')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#media')}>{t('header.media')}</a>
-                  <a style={{cursor:'pointer'}} onClick={() => jump('#about')}>{t('header.about')}</a>
-              </div>
-            )}</div>
             <Hero />
           </div>
         </div>
