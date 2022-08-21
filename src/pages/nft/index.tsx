@@ -39,7 +39,8 @@ function NFT() {
     return () => {
       console.log('clear effct');
     };
-  }, [isConnected, address])
+  }, [address])
+
   return (
     <div className="nft bg-[#0052FF] pt-[62px] flex flex-row" id="nft">
       <div className="nft-intro">

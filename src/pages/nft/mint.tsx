@@ -36,17 +36,17 @@ function mint(props: { address: any; contract: any; claim: any; }) {
   });
   console.debug('useContractReads', { data, isError });
   const maxSupply = 3706;
-  const totalSupply = data?.[0] ? (data[0] as unknown as BigNumber).toNumber() : 0;
-  const availableNum = maxSupply - totalSupply;
-  const balance = data?.[1] ? (data[1] as unknown as BigNumber).toNumber() : 0;
   const maxMintNum = parseInt(claim?.amount as string) || 0;
-  const numMinted = data?.[2] ? (data[2] as unknown as BigNumber).toNumber() : 0;
-  const freeMintNum = maxMintNum - numMinted;
+  let totalSupply = data?.[0] ? (data[0] as unknown as BigNumber).toNumber() : 0;
+  let balance = data?.[1] ? (data[1] as unknown as BigNumber).toNumber() : 0;
+  let numMinted = data?.[2] ? (data[2] as unknown as BigNumber).toNumber() : 0;
+  let availableNum = maxSupply - totalSupply;
+  let freeMintNum = maxMintNum - numMinted;
   const [numToMint, setNumToMint] = useState(freeMintNum);
   console.debug('nft info', { totalSupply, availableNum, balance, numMinted, freeMintNum, numToMint });
 
   const proof = claim?.proof || [];
-  const allowedToMint = freeMintNum > 0 && numToMint > 0;
+  let allowedToMint = freeMintNum > 0 && numToMint > 0;
   
   function increaseNumToMint() {
     if (numToMint >= freeMintNum) {
@@ -62,6 +62,14 @@ function mint(props: { address: any; contract: any; claim: any; }) {
     setNumToMint(numToMint-1);
   }
 
+  // 成功 mint 后刷新当前
+  const onSuccessMint = () => {
+    freeMintNum = freeMintNum - numToMint;
+    balance = balance + numToMint;
+    console.debug('onSuccess outside, reset freeMintNum, balance and numToMint', { freeMintNum, balance });
+    setNumToMint(freeMintNum);
+  }
+
   return (
     <>
       <MintInfo availableNum={availableNum} freeMintNum={freeMintNum} balance={balance} />
@@ -73,7 +81,7 @@ function mint(props: { address: any; contract: any; claim: any; }) {
         </div>
         <div className="nft-mint-btn flex ml-[24px]">
           { !allowedToMint && (<button className="btn btn-accent h-[45px] mr-[24px]" style={{ backgroundColor: 'gray'}}>{t('nft.freeMint')}</button>) }
-          { allowedToMint && (<MintBtn index={claim?.index} maxMintNum={maxMintNum} numToMint={numToMint} proof={proof} contract={contract} />) }
+          { allowedToMint && (<MintBtn index={claim?.index} maxMintNum={maxMintNum} numToMint={numToMint} proof={proof} contract={contract} onSuccess={onSuccessMint} />) }
         </div>
       </div>
     </>
