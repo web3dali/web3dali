@@ -37,7 +37,6 @@
   font-size: 48px;
   line-height: 1.2;
   color: #000000;
-  margin-bottom: 12px;
 }
 
 .nft-mint-info {
@@ -177,4 +176,11 @@
 
 .mobile-device .nft-mint-info {
   margin-bottom: 5vw !important;
+}
+
+.nft-opensea-link {
+  width: 48px;
+  height: 48px;
+  background: url('/nft/opensea_icon.png') no-repeat;
+  background-size: 100%;
 }

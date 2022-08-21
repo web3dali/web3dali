@@ -60,7 +60,10 @@ function NFT() {
       </div>
       <div className="nft-mint flex flex-col">
         <div className="nft-mint-main flex flex-col flex-[1] flex-center">
-          <div className="nft-mint-title">WAMO NFT MINT</div>
+          <div className="flex flex-center mb-[12px]">
+            <div className="nft-mint-title">WAMO NFT MINT</div>
+            <a className="nft-opensea-link ml-[2vw]" target="blank" href="https://opensea.io/collection/summerofwamo"></a>
+          </div>
           <div className="nft-mint-contract flex flex-row">
             <div className="nft-contract-supply mr-[54px]">{t('nft.total_supply')}: {maxSupply}</div>
             <div className="nft-contract-address">{t('nft.contract_address')}: <a href={`${etherscanHost}/address/${contractAddress}`} target="blank" title={contractAddress}>{shortContractAddress}</a></div>
