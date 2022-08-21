@@ -34,7 +34,7 @@ function Content() {
   }
   return isMobile() ? (
     <>
-      <div className="content bg-white" id="content">
+      <div className="content bg-white " id="content">
         <div className="content-inner p-16">
           <div className="box-container">
             <h1 className="text-[4rem] text-primary hero-kid-700 pb-4">

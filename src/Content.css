@@ -1,10 +1,11 @@
 .content {
   width: 100vw;
-  height: auto;
+  /* height: auto; */
   background-image: url('/wamo_content.svg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
+  min-height:3300px;
 }
 
 .content-inner {
