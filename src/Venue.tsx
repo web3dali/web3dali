@@ -5,7 +5,7 @@ function Venue() {
   const { t } = useTranslation()
 
   return (
-    <div className="box-container pb-10" id="venue">
+    <div className="box-container pb-10 venue" id="venue">
       <h1 className="text-[4rem] text-accent hero-kid-700 venue-title">
         {t('venue.title')}
       </h1>
