@@ -28,6 +28,7 @@ function mint(props: { address: any; contract: any; claim: any }) {
       }
     ],
     onSuccess: (data) => {
+      console.log('success')
       const maxMintNum = parseInt(claim?.amount as string) || 0
       const numMinted = data?.[2]
         ? ((data[2] as unknown) as BigNumber).toNumber()
@@ -36,6 +37,8 @@ function mint(props: { address: any; contract: any; claim: any }) {
       setNumToMint(freeMintNum)
     },
     onError(error) {
+
+      console.log('error')
       const maxMintNum = parseInt(claim?.amount as string) || 0
       const numMinted = 0
       const freeMintNum = maxMintNum - numMinted
