@@ -25,7 +25,7 @@ function preMint(props: { contract: any; }) {
         <ConnectBtn label={t('header.connect')} />
       </div>
     </>
-  )
+  )  
 }
 
 export default preMint
