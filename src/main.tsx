@@ -18,7 +18,6 @@ import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
-import { getDefaultProvider } from 'ethers'
 const { chains, provider } = configureChains(
   // [chain.rinkeby], // you can add more chains here like chain.mainnet, chain.optimism etc.
   [chain.mainnet],
