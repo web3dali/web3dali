@@ -13,7 +13,7 @@ function SpeakerBlock() {
 
   return (
     <div className="box-container pb-10" id="speaker">
-      <h1 className="text-[4rem] text-accent hero-kid-700">
+      <h1 className="text-[4rem] text-accent ">
         {t('venue.speakers')}
       </h1>
       <div className="grid grid-cols-4 gap-x-8">

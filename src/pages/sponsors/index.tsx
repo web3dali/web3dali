@@ -25,7 +25,7 @@ export const About = () => {
       <div className="sponsors_inner pb-30 ">
         <div className="box-container pt-50">
           <div id="sponsor"></div>
-          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-50">
+          <h2 className="text-[2.5rem] about-title  text-[#000] mt-50">
             {t('sponsors.title')}
           </h2>
           <div className="sponsor_faq box-container mt-15 pt-6  pb-7 ">
@@ -170,7 +170,7 @@ export const About = () => {
                 </div>
                 {i18n.language == 'en' ? (
                   <div className="pt-2">
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       Diamond level sponsorship - for maximum marketing impact
                     </h3>
                     <p>
@@ -180,7 +180,7 @@ export const About = () => {
                       promotional partner with WAGMI Summer throughout the
                       event.
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       WAGMI Platinum Level Sponsorship - Target Your Audience
                     </h3>
                     <p>
@@ -189,7 +189,7 @@ export const About = () => {
                       Summer of Wagyu Cat street fair or specific themed camps
                       incorporated into the street fair promotional activities.
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       LFG Gold & Booth Level Sponsorship - Generate buzz with
                       uniquely positioned programs
                     </h3>
@@ -197,7 +197,7 @@ export const About = () => {
                       Waccat Summer offers an autonomous showcase that aligns
                       with your brand marketing objectives.
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       Customized Opportunities
                     </h3>
                     <p>
@@ -207,7 +207,7 @@ export const About = () => {
                       develop a marketing plan that gets results and meets your
                       business goals.
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       PARTY Exclusive Sponsorship
                     </h3>
                     <p>
@@ -260,31 +260,31 @@ export const About = () => {
                   </div>
                 ) : (
                   <div className="pt-2">
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       钻石级赞助 — 实现最大的营销影响
                     </h3>
                     <p>
                       钻石级赞助提供最高的可见度、最深入的整合机会，并通过使您的品牌与瓦猫之夏在整个活动中成为顶级推广合作伙伴，提供无缝的推广曝光。
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       WAGMI 白金级赞助 — 锁定您的目标受众
                     </h3>
                     <p>
                       白金级赞助将使您的品牌在整个瓦猫之夏街会或特定的主题营地期间获得最大的曝光和参与机会，并纳入街会宣传活动中。
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       LFG 黄金及展位级赞助 — 通过独特定位的方案引起轰动
                     </h3>
                     <p>
                       瓦猫之夏提供了自主的展示平台，使其与您的品牌营销目标相一致。
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       定制机会
                     </h3>
                     <p>
                       从官方派对到休息室和艺术演出，瓦猫之夏提供各种可定制的营销资产，以满足您的品牌需求和目标。请联系我们，制定一个能取得效果并满足您业务目标的营销计划。
                     </p>
-                    <h3 className="text-[1.2rem]  hero-kid-700 text-[#000] mt-10">
+                    <h3 className="text-[1.2rem]   text-[#000] mt-10">
                       PARTY 专项赞助商
                     </h3>
                     <p>
@@ -373,7 +373,7 @@ export const About = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-30">
+          <h2 className="text-[2.5rem] about-title  text-[#000] mt-30">
             {t('sponsors.title1')}
           </h2>
           <div className="flex-between mt-15">
@@ -395,7 +395,7 @@ export const About = () => {
             <div className="sponsors-img-empty"></div>
           </div>
 
-          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-45">
+          <h2 className="text-[2.5rem] about-title  text-[#000] mt-45">
             {t('sponsors.title2')}
           </h2>
           <div className="flex-between mt-20">
@@ -473,7 +473,7 @@ export const About = () => {
             <div className="sponsors-img-empty"></div>
           </div> */}
 
-          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] mt-45">
+          <h2 className="text-[2.5rem] about-title  text-[#000] mt-45">
             {t('sponsors.title3')}
           </h2>
           <div className="flex-between mt-20">
@@ -496,7 +496,7 @@ export const About = () => {
             </div>
           </div>
           <div id="media" className="pt-45"></div>
-          <h2 className="text-[2.5rem] about-title hero-kid-700 text-[#000] ">
+          <h2 className="text-[2.5rem] about-title  text-[#000] ">
             {t('sponsors.title4')}
           </h2>
           <div className="flex-between mt-20">

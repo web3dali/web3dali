@@ -37,7 +37,7 @@ function Content() {
       <div className="content bg-white " id="content">
         <div className="content-inner p-16">
           <div className="box-container">
-            <h1 className="text-[4rem] text-primary hero-kid-700 pb-4">
+            <h1 className="text-[4rem] text-primary  pb-4">
               {t('content.title')}
             </h1>
             <section>
@@ -56,10 +56,10 @@ function Content() {
               </div>
               <div className="text-[#2f2f2f] mt-12">
                 <div>
-                  <div className="text-primary hero-kid-700 text-5xl">
+                  <div className="text-primary  text-5xl">
                     Day 1
                   </div>
-                  <div className="text-accent hero-kid-700 text-2xl mt-2">19 August</div>
+                  <div className="text-accent  text-2xl mt-2">19 August</div>
                   <ul
                     className="font-weight-[700] text-[24px] ml--5"
                     style={{ lineHeight: 2 }}
@@ -72,10 +72,10 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] mt-8">
                   <div>
-                    <div className="text-primary hero-kid-700 text-5xl">
+                    <div className="text-primary  text-5xl">
                       Day 2
                     </div>
-                    <div className="text-accent hero-kid-700 text-2xl mt-2">20 August</div>
+                    <div className="text-accent  text-2xl mt-2">20 August</div>
                     <ul
                       className="font-weight-[700] text-[24px] ml--5"
                       style={{ lineHeight: 2 }}
@@ -99,7 +99,7 @@ function Content() {
               <section >
                 <div className="text-[#2f2f2f]  flex flex-col mt-20">
                   <fieldset className="pr10">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp1_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -108,7 +108,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp2_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -117,7 +117,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp3_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -129,7 +129,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp4_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -138,7 +138,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp5_title')}
                     </figcaption>
                     <figure className="text-[17px] pt-2">
@@ -175,7 +175,7 @@ function Content() {
               <section className="flex flex-col">
                 <div className="text-[#2f2f2f]  mt-20">
                   <fieldset className="pr10  flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp2_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -184,7 +184,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp1_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -193,7 +193,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp3_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -204,7 +204,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       霍比特 SUNSET 电子乐派对
                     </figcaption>
                     <figure className="text-[17px] pt-2">
@@ -217,7 +217,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp5_title')}
                     </figcaption>
                     <figure className="text-[17px] pt-2">
@@ -227,7 +227,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       LFG 户外嗨玩营地
                     </figcaption>
                     <figure className="text-[17px] pt-2">
@@ -237,7 +237,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10 mt-8">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp4_title')}
                     </figcaption>
                     <figure className="text-xl pt-2">
@@ -292,7 +292,7 @@ function Content() {
       <div className="content bg-white" id="content">
         <div className="content-inner p-16">
           <div className="box-container">
-            <h1 className="text-[4rem] text-primary hero-kid-700 pb-4">
+            <h1 className="text-[4rem] text-primary  pb-4">
               {t('content.title')}
             </h1>
             <section className="flex">
@@ -315,10 +315,10 @@ function Content() {
               <img src="/content_img_02.png" className="w-[50%]" alt="" />
               <div className="text-[#2f2f2f] w-[50%]">
                 <div className="p-8">
-                  <div className="text-primary hero-kid-700 text-4xl">
+                  <div className="text-primary  text-4xl">
                     Day 1
                   </div>
-                  <div className="text-accent hero-kid-700">19 August</div>
+                  <div className="text-accent ">19 August</div>
                   <ul
                     className="font-weight-[700] text-[20px]"
                     style={{ lineHeight: 2 }}
@@ -335,10 +335,10 @@ function Content() {
               <img src="/content_img_03.png" className="w-[50%]" alt="" />
               <div className="text-[#2f2f2f] w-[50%]">
                 <div className="p-8">
-                  <div className="text-primary hero-kid-700 text-4xl">
+                  <div className="text-primary  text-4xl">
                     Day 2
                   </div>
-                  <div className="text-accent hero-kid-700">20 August</div>
+                  <div className="text-accent ">20 August</div>
                   <ul
                     className="font-weight-[700] text-[20px]"
                     style={{ lineHeight: 2 }}
@@ -355,7 +355,7 @@ function Content() {
               <section className="flex flex-row">
                 <div className="text-[#2f2f2f] w-[50%] text-right flex flex-col justify-around mt-10">
                   <fieldset className="pr10">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp1_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -364,7 +364,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp2_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -373,7 +373,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp3_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -385,7 +385,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp4_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -394,7 +394,7 @@ function Content() {
                     </figure>
                   </fieldset>
                   <fieldset className="pr10">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp5_title')}
                     </figcaption>
                     <figure className="text-[17px] pt-7">
@@ -431,7 +431,7 @@ function Content() {
               <section className="flex flex-col">
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp2_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -445,7 +445,7 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp1_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -459,7 +459,7 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp3_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">
@@ -475,7 +475,7 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       霍比特 SUNSET 电子乐派对
                     </figcaption>
                     <figure className="text-[17px] pt-7">
@@ -493,7 +493,7 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp5_title')}
                     </figcaption>
                     <figure className="text-[17px] pt-7">
@@ -508,7 +508,7 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       LFG 户外嗨玩营地
                     </figcaption>
                     <figure className="text-[17px] pt-7">
@@ -523,7 +523,7 @@ function Content() {
                 </div>
                 <div className="text-[#2f2f2f] text-right flex flex-row justify-around mt-0">
                   <fieldset className="pr10 w-[50%] flex flex-col justify-center">
-                    <figcaption className="text-primary hero-kid-700 text-4xl">
+                    <figcaption className="text-primary  text-4xl">
                       {t('content.camp4_title')}
                     </figcaption>
                     <figure className="text-xl pt-7">

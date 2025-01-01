@@ -39,7 +39,7 @@ function Hero() {
 
           <div className="text-[#FFF] flex flex-col ">
             <div className='text-4xl'>{t('hero.event')}</div>
-            <div className="text-6xl font-bold py-8 hero-kid-800">
+            <div className="text-6xl font-bold py-8 ">
               {t('hero.summer')}
             </div>
 
@@ -67,7 +67,7 @@ function Hero() {
         <>
           <div className="text-[#FFF] flex flex-col ">
             <div>{t('hero.event')}</div>
-            <div className="text-5xl font-bold py-8 hero-kid-800">
+            <div className="text-5xl font-bold py-8 ">
               {t('hero.summer')}
             </div>
 

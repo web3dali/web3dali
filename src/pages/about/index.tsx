@@ -19,7 +19,7 @@ export const About = () => {
         <div className="about_bg1"></div>
         <div className="about_inner pt-50 pb-120">
           <div className="box-container ">
-            <h1 className="text-[4rem] about-title hero-kid-700">
+            <h1 className="text-[4rem] about-title ">
               {t('about.title')}
             </h1>
             {i18n.language == 'en' ? (
